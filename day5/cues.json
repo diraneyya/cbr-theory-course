@@ -10,6 +10,14 @@
     },
     {
       "type": "image",
+      "time": 28.4,
+      "image": "photos/diagram-alcohol-limits.svg",
+      "caption": "0.5‰ experienced — 0.2‰ for the first five licence years",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
       "time": 86.605,
       "image": "photos/diagram-drugs-medicines.svg",
       "caption": "Illegal drugs: any measurable amount. Medicines: the yellow sticker",

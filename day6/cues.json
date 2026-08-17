@@ -10,9 +10,25 @@
     },
     {
       "type": "image",
+      "time": 25.462,
+      "image": "photos/diagram-stop-vs-park.svg",
+      "caption": "Slash = no parking (brief stop OK) · cross = no stopping at all",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
       "time": 84.236,
       "image": "photos/diagram-noparking-map.svg",
       "caption": "5 m from a junction, 5 m before a zebra, never across a driveway",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 136.092,
+      "image": "photos/E10.png",
+      "caption": "Parkeerschijfzone — free parking, rationed by the blue disc",
       "rotation": 0,
       "explicit": true
     },

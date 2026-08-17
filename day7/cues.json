@@ -10,6 +10,14 @@
     },
     {
       "type": "image",
+      "time": 40.65,
+      "image": "photos/diagram-exam-format.svg",
+      "caption": "May you (legal) ≠ is it wise (safe) ≠ must you (obliged)",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
       "time": 97.138,
       "image": "photos/diagram-hazard-scene.svg",
       "caption": "Four classics: the ball, the parked car, the bus, the side road",
