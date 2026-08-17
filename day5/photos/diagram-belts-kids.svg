@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#1a1a1a"/>
+<text x="640.0" y="64" font-size="42" fill="#f5f5f5" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">Belts and children — the 1.35 metre line</text>
+<rect x="120" y="140" width="480" height="380" rx="18" fill="#262626" stroke="#4d9de0" stroke-width="3"/>
+<text x="360" y="200" font-size="32" fill="#4d9de0" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">everyone</text>
+<text x="360" y="280" font-size="28" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">seatbelt on, every seat,</text>
+<text x="360" y="316" font-size="28" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">every trip — no exceptions</text>
+<text x="360" y="400" font-size="26" fill="#aaaaaa" text-anchor="middle" font-family="Helvetica,Arial">the DRIVER is responsible for</text>
+<text x="360" y="436" font-size="26" fill="#aaaaaa" text-anchor="middle" font-family="Helvetica,Arial">passengers under 12</text>
+<rect x="680" y="140" width="480" height="380" rx="18" fill="#262626" stroke="#ffb454" stroke-width="3"/>
+<text x="920" y="200" font-size="32" fill="#ffb454" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">children under 1.35 m</text>
+<line x1="780" y1="260" x2="780" y2="470" stroke="#666" stroke-width="4"/>
+<line x1="760" y1="260" x2="800" y2="260" stroke="#ffb454" stroke-width="4"/>
+<text x="815" y="270" font-size="24" fill="#ffb454" font-family="Helvetica,Arial">1.35 m</text>
+<circle cx="850" cy="380" r="22" fill="#8d99ae"/>
+<rect x="832" y="406" width="36" height="60" rx="10" fill="#8d99ae"/>
+<text x="1010" y="330" font-size="28" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">approved child seat</text>
+<text x="1010" y="366" font-size="28" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">or booster —</text>
+<text x="1010" y="402" font-size="28" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">belt alone is not enough</text>
+<text x="640.0" y="600" font-size="28" fill="#aaaaaa" text-anchor="middle" font-family="Helvetica,Arial">Shorter than the line → child seat. Taller → normal belt.</text>
+</svg>

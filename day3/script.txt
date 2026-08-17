@@ -1,0 +1,67 @@
+Welcome to day three. Day one was who goes first; day two was reading signs. Today is how fast — and the single most important idea comes right at the start: in the Netherlands, most of the time there is no speed sign at all. The exam knows this, and it loves to ask "how fast may you go here?" on a road with no sign in sight. The answer always comes from the road type. Here is the whole ladder on one screen: inside the built-up area, fifty. Outside it, eighty. On an expressway, one hundred. On a motorway, one hundred and thirty — with a big Dutch twist we will get to. A sign can lower these, but when there is no sign, this ladder is the law. Keep it in your head and half of today is already done.
+
+1. The city gate — the built-up area.
+
+This blue sign with a town name on it looks like pure information — day two would file it as a blue rectangle, and it is. But it carries a hidden rule, and the exam tests exactly this: the town-name sign marks the start of the built-up area — the [nl: bebouwde kom] — and from this sign onward the default limit is fifty. No number is shown anywhere. The name of the town is the speed limit sign.
+
+And the same sign with a red line through it means you have left the built-up area. Again no number appears — but the moment you pass it, the default changes: outside the [nl: bebouwde kom] the limit is eighty. This pair of signs is the classic unsigned-speed question. See a town name, think fifty; see it struck through, think eighty. Unless, of course, a numbered sign tells you otherwise.
+
+2. Zones — one sign, a whole neighbourhood.
+
+Inside towns you will constantly meet this: a thirty sign with the word zone above it. The word [nl: zone] changes how the sign works. A normal speed sign applies to the road you are on; a zone sign applies to an entire area — every street, every corner, every side road inside it — and it is not repeated. You can turn left, turn right, drive five streets deep: still thirty. The exam trap is exactly that turn — "you turned into a side street and see no sign; how fast?" If you entered through a zone sign, the zone is still on.
+
+The zone ends only when you pass this: the same sign greyed out and struck through — the end of the zone. Until you see it, you are inside. After it, the ladder takes over again — inside the built-up area that means back to fifty.
+
+One special zone goes even further. This blue sign — a house, an adult, a child with a ball — marks a residential yard, the [nl: erf], often called a [nl: woonerf]. Here the street belongs to the people living on it: children may play on the road itself, and you are a guest. The limit is not a number at all — you must drive at walking pace, [nl: stapvoets]; in practice that means about fifteen kilometres per hour, and the exam answer is "walking pace".
+
+Leaving the [nl: erf] you pass this end sign — and here is a beautiful crossover with day one: driving out of an [nl: erf] counts as leaving an exit, and whoever leaves an exit gives way to all other traffic, cyclists and pedestrians included. So at the edge of the yard you are last in line, whatever comes.
+
+3. The fast roads — expressway and motorway.
+
+Now the open road. This blue square with a white car marks an expressway — the [nl: autoweg]. You know from day two that a blue square is information; the information is the road type, and the road type sets the default: one hundred on the [nl: autoweg]. It also bans slow traffic — no bicycles, no mopeds, no tractors.
+
+And this one — the twin carriageways and a bridge — is the motorway, the [nl: autosnelweg]. On paper the motorway limit is one hundred and thirty. But the Netherlands has a rule that surprises every foreign driver, and the exam knows it.
+
+Since 2020, the daytime limit on every Dutch motorway is one hundred. From six in the morning until seven in the evening, one hundred is the ceiling, everywhere. Only at night — from seven in the evening to six in the morning — may you do one hundred and thirty, and then only where the signs say so; some stretches stay at one hundred or one hundred and twenty even at night. The little time plaque under the speed signs — six to nineteen — is exactly this rule in the wild. For the exam, burn in the daytime number: motorway, daytime, one hundred.
+
+One more thing lives above these lanes: the electronic matrix boards. When a matrix board shows a number in a red ring, that is a real, enforceable speed limit — exactly as binding as a metal sign, and it beats whatever was posted before it.
+
+4. Signs that change the number — and the one that only advises.
+
+You met this on day two: the red ring with a number, the hard maximum. It overrides the road-type default and it stays in force until something changes it — a different number, an end sign, or the end of the road it applies to.
+
+This grey struck-through fifty is the end-of-limit sign, [nl: einde]. And here is the exam's favourite little trap: the end sign does not mean "no limit" and it does not mean "keep doing fifty". It means the posted limit is over — so you fall back onto the ladder from the start of today. Outside the built-up area, the end of a fifty limit means eighty applies again. The question "what is the limit after this sign?" is really the question "what road are you on?"
+
+Now look closely at this one. Fifty again — but the shape and colour are wrong for a limit. It is a blue square, and day two taught you what that means: information, not command. This is the advisory speed, the [nl: adviessnelheid] — the speed that is wise here, usually posted at curves and ramps. Driving faster than the advice is not an offence in itself. But do not relax too far: the general rule that you must always drive safely for the conditions still applies, and the real limit of the road still stands. Red ring: law. Blue square: advice.
+
+5. Your vehicle sets a limit too — and the lowest number wins.
+
+There is a third source of limits besides the road and the signs: what you are driving. A car towing a trailer or a caravan may do at most ninety, even on the motorway. So at any moment, three numbers can apply to you at once — the road type says one thing, a sign or matrix board says another, and your vehicle has its own ceiling. The rule that resolves it is simple and absolute: the lowest number wins. In this example you are on a motorway at night — one hundred and thirty on paper — the matrix board shows one hundred, and you are towing a trailer: you drive ninety. The exam phrases this as "what is the maximum speed for this driver?" — always answer for the slowest rule that applies.
+
+6. Practice — five exam-style questions.
+
+My own questions in the exam's style — drill the reasoning. Pause, decide, then listen.
+
+Question one. You pass the town-name sign with a red line through it. There is no speed sign anywhere. How fast may you go?
+
+Eighty. The struck-through town name means you left the [nl: bebouwde kom], and outside the built-up area the default is eighty. No sign needed — the road type is the rule. If the options include fifty or one hundred, those are the defaults of the roads you are not on.
+
+Question two. You are on the [nl: autosnelweg] at two in the afternoon. No matrix boards are lit. What is your maximum speed?
+
+One hundred. Between six in the morning and seven in the evening the daytime rule caps every Dutch motorway at one hundred — the one-thirty on the entry signs only comes back at night, and only where signed. If the exam offers one hundred and thirty for a daytime motorway question, that is the trap.
+
+Question three. You entered a neighbourhood past a zone thirty sign, turned twice, and are now three streets deep. You have seen no speed sign since. How fast may you go?
+
+Thirty. A [nl: zone] sign covers the whole area and is not repeated on the side streets — the zone lasts until the grey struck-through end-of-zone sign. "I saw no sign on this street" is exactly the thinking the zone system exists to overrule.
+
+Question four. On a curve, a blue square shows fifty kilometres per hour. You drive sixty. Is that an offence in itself?
+
+No. The blue square is the [nl: adviessnelheid] — advisory, information, not a command; only a red ring makes a number the law. But two things still bind you: the actual limit of the road, and the duty to drive safely for the conditions — in a crash, ignoring the advice will count against you. Advice you may exceed; wisdom says don't.
+
+Question five. Night time, the [nl: autosnelweg] is signed one hundred and thirty, and you are towing a caravan. What is your maximum?
+
+Ninety. Your vehicle combination carries its own ceiling — a car with a trailer or caravan may never exceed ninety — and the lowest applicable number always wins. The signed one-thirty is the road's permission, not yours.
+
+Closing.
+
+That is speed in the Netherlands. The ladder first: fifty in town, eighty outside, one hundred on the [nl: autoweg], one hundred and thirty on the [nl: autosnelweg] — but one hundred by day. Zones hold until their end sign, the [nl: erf] means walking pace, the end of a limit means back to the road-type default, blue squares only advise, and when several numbers apply at once, you drive the lowest. Tomorrow, day four: the other road users — cyclists, mopeds, trams and trucks — and the rules that protect them from you. Well done.

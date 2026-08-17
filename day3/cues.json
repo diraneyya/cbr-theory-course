@@ -1,0 +1,201 @@
+{
+  "cues": [
+    {
+      "type": "image",
+      "time": 0.075,
+      "image": "photos/diagram-speed-ladder.svg",
+      "caption": "No sign? The road type sets the limit — 50, 80, 100, 130",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 48.663,
+      "image": "photos/H1.png",
+      "caption": "The blue town-name sign IS a speed rule — 50 starts here",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 72.779,
+      "image": "photos/H2.png",
+      "caption": "Town name struck through — you left the bebouwde kom. Default: 80",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 102.064,
+      "image": "photos/A1-30zone.png",
+      "caption": "ZONE 30 — the limit applies to every street inside the zone",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 140.155,
+      "image": "photos/A1-30endzone.png",
+      "caption": "The zone ends only here — grey, struck through",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 153.393,
+      "image": "photos/G5.png",
+      "caption": "The erf — pedestrians own the road; you drive at walking pace",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 185.924,
+      "image": "photos/G6.png",
+      "caption": "Leaving the erf — and remember day 1: you give way to everyone",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 211.897,
+      "image": "photos/G3.png",
+      "caption": "Autoweg — the expressway. Default 100",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 234.431,
+      "image": "photos/G1.png",
+      "caption": "Autosnelweg — the motorway. On paper: 130",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 249.814,
+      "image": "photos/diagram-daytime-100.svg",
+      "caption": "06:00–19:00 → 100 everywhere. Night → 130 where signed",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 303.555,
+      "image": "photos/A1-50.png",
+      "caption": "The red ring sets a hard maximum — until something changes it",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 317.567,
+      "image": "photos/A2.png",
+      "caption": "End of the limit — so what applies now? The road type default",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 346.163,
+      "image": "photos/A4.png",
+      "caption": "Blue square, 50 km/h — advice, not law",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 387.629,
+      "image": "photos/diagram-lowest-wins.svg",
+      "caption": "Road type, sign, vehicle — you drive the lowest of the three",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 439.267,
+      "image": "photos/H2.png",
+      "caption": "Question 1 — town name struck through, no other sign",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 464.668,
+      "image": "photos/diagram-daytime-100.svg",
+      "caption": "Question 2 — motorway, two in the afternoon",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 492.245,
+      "image": "photos/A1-30zone.png",
+      "caption": "Question 3 — three streets deep inside a zone",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 520.158,
+      "image": "photos/A4.png",
+      "caption": "Question 4 — blue square says 50, you drive 60",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 552.372,
+      "image": "photos/diagram-lowest-wins.svg",
+      "caption": "Question 5 — night motorway, signed 130, towing a caravan",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 577.98,
+      "image": "photos/diagram-speed-ladder.svg",
+      "caption": "The ladder — 50, 80, 100, 130* — and the lowest number wins",
+      "rotation": 0,
+      "explicit": true
+    }
+  ],
+  "sections": [
+    {
+      "time": 45.237,
+      "level": 2,
+      "title": "1. The city gate — the built-up area"
+    },
+    {
+      "time": 98.013,
+      "level": 2,
+      "title": "2. Zones — one sign, a whole neighbourhood"
+    },
+    {
+      "time": 207.734,
+      "level": 2,
+      "title": "3. The fast roads — expressway and motorway"
+    },
+    {
+      "time": 298.567,
+      "level": 2,
+      "title": "4. Signs that change the number — and the one that only advises"
+    },
+    {
+      "time": 382.916,
+      "level": 2,
+      "title": "5. Your vehicle sets a limit too — and the lowest number wins"
+    },
+    {
+      "time": 429.179,
+      "level": 2,
+      "title": "6. Practice — five exam-style questions"
+    },
+    {
+      "time": 577.017,
+      "level": 2,
+      "title": "Closing"
+    }
+  ]
+}

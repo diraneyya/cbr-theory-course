@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1a1a1a"/>
+  <!-- roads -->
+  <rect x="520" y="0" width="240" height="720" fill="#3a3a3a"/>
+  <rect x="0" y="270" width="1280" height="240" fill="#3a3a3a"/>
+  <!-- centre dashes -->
+  <g stroke="#e8e8e8" stroke-width="6" stroke-dasharray="34 30">
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="0" y1="390" x2="1280" y2="390"/>
+  </g>
+  <!-- YOU car (blue), coming from bottom going up -->
+  <rect x="588" y="545" width="104" height="150" rx="16" fill="#3b82f6"/>
+  <polygon points="640,505 610,555 670,555" fill="#3b82f6"/>
+  <text x="640" y="635" font-family="Arial" font-size="34" font-weight="bold" fill="#fff" text-anchor="middle">YOU</text>
+  <!-- Right car (orange), coming from the right going left -->
+  <rect x="905" y="315" width="150" height="104" rx="16" fill="#f59e0b"/>
+  <polygon points="885,367 935,337 935,397" fill="#f59e0b"/>
+  <!-- priority marks -->
+  <text x="980" y="285" font-family="Arial" font-size="30" font-weight="bold" fill="#22c55e" text-anchor="middle">▲ has priority</text>
+  <text x="640" y="540" font-family="Arial" font-size="26" font-weight="bold" fill="#ef4444" text-anchor="middle">give way ✋</text>
+  <!-- titles -->
+  <text x="40" y="70" font-family="Arial" font-size="46" font-weight="bold" fill="#fff">No sign. No shark-teeth. No priority road.</text>
+  <text x="40" y="130" font-family="Arial" font-size="52" font-weight="bold" fill="#f5c400">➜  Traffic from your RIGHT goes first</text>
+  <text x="40" y="690" font-family="Arial" font-size="40" fill="#ff9f43" font-style="italic">voorrang van rechts  —  "right before left"</text>
+</svg>

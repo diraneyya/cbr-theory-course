@@ -1,0 +1,116 @@
+{
+  "cues": [
+    {
+      "type": "image",
+      "time": 0.087,
+      "image": "photos/diagram-stop-vs-park.svg",
+      "caption": "One legal split carries the whole topic: stopping is not parking",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 84.236,
+      "image": "photos/diagram-noparking-map.svg",
+      "caption": "5 m from a junction, 5 m before a zebra, never across a driveway",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 167.766,
+      "image": "photos/diagram-lights.svg",
+      "caption": "Dipped by default — and the rear fog light only under 50 metres",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 223.054,
+      "image": "photos/diagram-eco-vehicle.svg",
+      "caption": "1.6 mm tread, a secured load — and the eco answers",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 306.056,
+      "image": "photos/diagram-stop-vs-park.svg",
+      "caption": "Question 1 — dropping a passenger under each of the two signs",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 333.306,
+      "image": "photos/diagram-noparking-map.svg",
+      "caption": "Question 2 — parking three metres from the corner",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 360.647,
+      "image": "photos/E10.png",
+      "caption": "Question 3 — the blue-disc zone, max 2 hours",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 388.565,
+      "image": "photos/diagram-lights.svg",
+      "caption": "Question 4 — mist, visibility about 200 metres, rear fog on?",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 415.49,
+      "image": "photos/diagram-eco-vehicle.svg",
+      "caption": "Question 5 — which habit saves fuel?",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 447.835,
+      "image": "photos/diagram-noparking-map.svg",
+      "caption": "The unsigned bans — the part worth re-reading tonight",
+      "rotation": 0,
+      "explicit": true
+    }
+  ],
+  "sections": [
+    {
+      "time": 21.062,
+      "level": 2,
+      "title": "1. Stopping versus parking — two words, two signs"
+    },
+    {
+      "time": 80.198,
+      "level": 2,
+      "title": "2. Where parking is forbidden with no sign at all"
+    },
+    {
+      "time": 164.278,
+      "level": 2,
+      "title": "3. Lights — one number to burn in"
+    },
+    {
+      "time": 218.641,
+      "level": 2,
+      "title": "4. The car itself — tread, load, and driving on the cheap"
+    },
+    {
+      "time": 296.243,
+      "level": 2,
+      "title": "5. Practice — five exam-style questions"
+    },
+    {
+      "time": 446.873,
+      "level": 2,
+      "title": "Closing"
+    }
+  ]
+}

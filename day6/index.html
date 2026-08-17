@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CBR Theory — Day 6: Parking, Lights and the Car Itself</title>
+<style>
+:root { --bg:#1a1a1a; --fg:#f0f0f0; --accent:#4a9eff; --dim:rgba(255,255,255,0.6); }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { height:100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg); color: var(--fg);
+  display: flex; flex-direction: column;
+}
+header { padding: 0.7rem 2rem 0.25rem; display:flex; flex-direction:column; gap:0.15rem; }
+.doc-title { font-size: 0.9rem; font-weight: 500; opacity: 0.6; letter-spacing: 0.02em; }
+.section-ribbon { font-size: 1.05rem; font-weight: 500; color: var(--accent); min-height: 1.4em; }
+main {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 0.75rem 2rem; gap: 0.5rem; min-height: 0;
+  position: relative;
+}
+#stage {
+  flex: 1; width: 100%; max-width: 1200px;
+  display: flex; align-items: center; justify-content: center;
+  background: #000; border-radius: 12px; overflow: hidden;
+  min-height: 40vh; position: relative;
+}
+#stage img {
+  max-width: 100%; max-height: 75vh; object-fit: contain;
+  opacity: 0; transition: opacity 0.35s ease;
+  transform-origin: center center;
+}
+/* When rotated 90 or 270 deg, image's pre-rotation width becomes the visible height. */
+#stage img.rot-90, #stage img.rot-270 {
+  max-width: 75vh; max-height: 92%;
+}
+#stage img.visible { opacity: 1; }
+.fallback {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 2rem; gap: 1rem;
+  color: var(--fg); width: 100%; height: 100%;
+}
+.fallback .section-big {
+  font-size: 2.2rem; font-weight: 500; opacity: 0.85;
+  max-width: 90%; line-height: 1.25;
+}
+.fallback .hint {
+  font-size: 0.95rem; color: var(--dim); opacity: 0.6;
+}
+.overlay {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; height: 100%; padding: 2rem; gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(74,158,255,0.08), rgba(74,158,255,0.02));
+}
+.overlay .ov-title {
+  font-size: 1.8rem; font-weight: 500; color: var(--accent); text-align: center;
+}
+.overlay .ov-lines {
+  display: flex; flex-direction: column; gap: 0.85rem; align-items: center;
+}
+.overlay .ov-line {
+  font-size: 1.7rem; font-weight: 400; opacity: 0.95;
+  font-variant-numeric: tabular-nums;
+}
+#caption {
+  font-size: 0.9rem; color: var(--dim);
+  text-align: center; min-height: 1.2em; max-width: 1100px;
+}
+footer {
+  padding: 0.75rem 2rem 1.25rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+#scrubber {
+  width: 100%; height: 5px; background: rgba(255,255,255,0.15);
+  border-radius: 3px; cursor: pointer; position: relative;
+}
+#scrubber-fill {
+  height: 100%; background: var(--accent); border-radius: 3px;
+  width: 0%; pointer-events: none;
+}
+#scrubber-marks {
+  position: absolute; top: 0; left: 0; right: 0; height: 100%;
+  pointer-events: none;
+}
+.cue-mark {
+  position: absolute; top: -3px; width: 2px; height: 11px;
+  background: rgba(255,255,255,0.45); border-radius: 1px;
+  cursor: pointer; pointer-events: auto;
+}
+.cue-mark::before {
+  content: ""; position: absolute;
+  top: -10px; bottom: -10px; left: -7px; right: -7px;
+}
+.cue-mark:hover { background: var(--accent); width: 3px; }
+.cue-mark.overlay-mark { background: rgba(255,200,100,0.65); }
+.cue-mark.overlay-mark:hover { background: rgb(255,200,100); }
+.cue-mark.vocab-mark { background: rgba(199,155,240,0.7); }
+.cue-mark.vocab-mark:hover { background: rgb(199,155,240); }
+.cue-mark.drill-mark { background: rgba(240,168,104,0.75); }
+.cue-mark.drill-mark:hover { background: rgb(240,168,104); }
+.cue-mark.verse-mark { background: rgba(232,197,71,0.7); }
+.cue-mark.verse-mark:hover { background: rgb(232,197,71); }
+.cue-mark.gap-mark { background: rgba(255,90,90,0.85); }
+.cue-mark.gap-mark:hover { background: rgb(255,90,90); }
+#scrubber-marks { pointer-events: none; }
+#scrubber-marks .cue-mark { pointer-events: auto; }
+/* Vocabulary card — color-coded to match the narration voices */
+.vocab-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; height: 100%; padding: 2rem; gap: 0.9rem;
+  background: linear-gradient(135deg, rgba(199,155,240,0.10), rgba(199,155,240,0.02));
+}
+.vocab-row {
+  display: flex; align-items: baseline; gap: 0.9rem;
+  font-size: 2rem; font-weight: 500;
+}
+.vocab-row .vocab-lang {
+  font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.06em; opacity: 0.85;
+  min-width: 2.2em; text-align: right;
+}
+.vocab-row .vocab-word { font-weight: 500; }
+.vocab-lang-nl, .vocab-row.lang-nl .vocab-word { color: #f0a868; }
+.vocab-lang-de, .vocab-row.lang-de .vocab-word { color: #7ec77e; }
+.vocab-lang-en, .vocab-row.lang-en .vocab-word { color: #4a9eff; }
+.vocab-lang-ar, .vocab-row.lang-ar .vocab-word { color: #c89bf0; }
+.vocab-lang-es, .vocab-row.lang-es .vocab-word { color: #ff6b6b; }
+.vocab-lang-he, .vocab-row.lang-he .vocab-word { color: #e8c547; }
+.vocab-row.lang-he .vocab-lang { color: #e8c547; }
+.vocab-lang-sy, .vocab-row.lang-sy .vocab-word { color: #4fd1c5; }
+.vocab-row.lang-sy .vocab-lang { color: #4fd1c5; }
+.vocab-row.lang-nl .vocab-lang { color: #f0a868; }
+.vocab-row.lang-de .vocab-lang { color: #7ec77e; }
+.vocab-row.lang-en .vocab-lang { color: #4a9eff; }
+.vocab-row.lang-ar .vocab-lang { color: #c89bf0; }
+.vocab-row.lang-es .vocab-lang { color: #ff6b6b; }
+/* Verse slide — one line of scripture/song in its own script, a readable
+   transliteration under it, and a gloss. Wraps; sized to fit long lines. */
+.verse-slide {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; height: 100%; padding: 2rem 2.5rem; gap: 1.1rem; text-align: center;
+  background: linear-gradient(135deg, rgba(232,197,71,0.09), rgba(200,155,240,0.04));
+}
+.verse-line { max-width: 94%; line-height: 1.55; }
+.verse-line.role-he { color: #e8c547; direction: rtl; font-size: 2.15rem; font-weight: 500; }
+.verse-line.role-ar { color: #c89bf0; direction: rtl; font-size: 2.15rem; font-weight: 500; }
+.verse-line.role-sy { color: #4fd1c5; direction: rtl; font-size: 2.15rem; font-weight: 500; }
+.verse-line.role-translit { color: #c89bf0; direction: rtl; font-size: 2.15rem; font-weight: 500; }
+.verse-line.role-roman { color: #9aa4b2; font-size: 1.15rem; font-style: italic; letter-spacing: 0.02em; }
+.verse-line.role-gloss { color: #4a9eff; font-size: 1.3rem; font-weight: 500; }
+.verse-line.role-note { color: #8b93a0; font-size: 1.05rem; }
+/* A mapping row (e.g. "ש → س"): forced LTR so the pair reads left-to-right even
+   though both glyphs are RTL scripts. Isolated single letters place correctly. */
+.verse-line.role-title { color: #fff; font-size: 1.35rem; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.verse-line.role-pair { direction: ltr; font-size: 2rem; font-weight: 600;
+  color: #e8c547; line-height: 1.35; }
+.verse-slide .role-pair + .role-pair { margin-top: -0.35rem; }
+.verse-rule { width: 42%; height: 1px; background: rgba(255,255,255,0.13); }
+@media (max-width: 900px) {
+  .verse-line.role-he, .verse-line.role-ar, .verse-line.role-translit { font-size: 1.5rem; }
+  .verse-line.role-gloss { font-size: 1.05rem; }
+  .verse-line.role-roman, .verse-line.role-note { font-size: 0.92rem; }
+}
+/* Drill card — one rung of a speak-along build-up. The NEW chunk is highlighted. */
+.drill-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; height: 100%; gap: 1.1rem; text-align: center; padding: 2rem;
+}
+.drill-phrase { font-size: 2.9rem; font-weight: 700; line-height: 1.3; max-width: 92%; color: #f0a868; }
+.drill-card[data-lang="he"] .drill-phrase { color: #e8c547; direction: rtl; }
+.drill-card[data-lang="sy"] .drill-phrase { color: #4fd1c5; direction: rtl; }
+.drill-card[data-lang="ar"] .drill-phrase { color: #c89bf0; direction: rtl; }
+.drill-card[data-lang="de"] .drill-phrase { color: #7ec77e; }
+.drill-card[data-lang="es"] .drill-phrase { color: #ff6b6b; }
+.drill-card[data-lang="en"] .drill-phrase { color: #4a9eff; }
+.drill-phrase .new {
+  color: #fff; background: rgba(255,255,255,0.14);
+  border-bottom: 3px solid currentColor; border-radius: 4px; padding: 0 0.15em;
+}
+/* The learner's own script does TWO different jobs and they must never look the
+   same: `read` = how to PRONOUNCE the target word (a crutch for a script the
+   learner can't read); `mean` = what it MEANS. Same alphabet, opposite purpose.
+   Pronunciation is muted slate with a نُطق tag; meaning keeps the lavender. */
+.drill-read {
+  font-size: 1.9rem; font-weight: 500; color: #93a4bd; direction: rtl;
+  max-width: 92%; letter-spacing: .01em; position: relative;
+}
+.drill-mean {
+  font-size: 2.05rem; font-weight: 600; color: #c89bf0; direction: rtl; max-width: 92%;
+}
+.drill-read::before, .drill-mean::before {
+  content: attr(data-role); display: block; font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; opacity: .55; margin-bottom: .15rem; direction: rtl;
+}
+.drill-read::before  { content: "نُطق";  color: #93a4bd; }
+.drill-mean::before  { content: "مَعنى"; color: #c89bf0; }
+.drill-gloss { font-size: 1.25rem; color: #9aa4b2; font-style: italic; max-width: 88%; }
+.drill-hint {
+  font-size: 0.9rem; color: #8b93a0; letter-spacing: 0.09em;
+  text-transform: uppercase; opacity: 0.75;
+}
+/* "Your turn" badge — a compact pill that does NOT occlude the card. Driven
+   purely by playback position, because the pause is real silence in the MP3. */
+#pause-overlay {
+  position: absolute; top: 1.1rem; left: 50%; transform: translateX(-50%);
+  z-index: 80; display: none; flex-direction: column; align-items: center; gap: 0.5rem;
+  padding: 0.55rem 1.1rem; border-radius: 999px;
+  background: rgba(232,197,71,0.14); border: 1px solid rgba(232,197,71,0.55);
+  box-shadow: 0 2px 14px rgba(0,0,0,0.35);
+}
+#pause-overlay.visible { display: flex; animation: pause-pop 0.18s ease; }
+@keyframes pause-pop { from { opacity: 0; transform: translateX(-50%) translateY(-6px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+.pause-row { display: flex; align-items: center; gap: 0.5rem; }
+.pause-icon { font-size: 1.2rem; }
+.pause-prompt { font-size: 1.05rem; font-weight: 600; color: #e8c547; }
+.pause-bar { width: 180px; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.16); overflow: hidden; }
+.pause-bar > i { display: block; height: 100%; width: 100%; background: #e8c547; transform-origin: left; transform: scaleX(1); }
+@media (max-width: 900px) {
+  .drill-phrase { font-size: 1.9rem; } .drill-read { font-size: 1.4rem; }
+  .drill-gloss { font-size: 1rem; } .pause-bar { width: 120px; }
+}
+/* Gap slide — a visual the author declared but hasn't sourced yet */
+.gap-slide {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; height: 100%; padding: 2rem; gap: 1rem; text-align: center;
+  background: repeating-linear-gradient(45deg,
+    rgba(255,90,90,0.06), rgba(255,90,90,0.06) 12px,
+    rgba(255,90,90,0.02) 12px, rgba(255,90,90,0.02) 24px);
+  border: 2px dashed rgba(255,90,90,0.5); border-radius: 12px;
+}
+.gap-slide .gap-tag {
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em;
+  color: #ff7a7a; text-transform: uppercase;
+}
+.gap-slide .gap-text {
+  font-size: 1.6rem; font-weight: 500; opacity: 0.92; max-width: 85%; line-height: 1.3;
+}
+.gap-slide .gap-meta {
+  font-size: 0.9rem; color: var(--dim); opacity: 0.7; max-width: 80%;
+}
+#cue-preview {
+  position: fixed;
+  z-index: 100;
+  background: rgba(20,20,22,0.97);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 8px;
+  max-width: 280px;
+  pointer-events: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  display: none;
+  font-size: 0.82rem;
+}
+#cue-preview.visible { display: block; }
+#cue-preview img {
+  display: block;
+  max-width: 100%;
+  max-height: 160px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+#cue-preview img.rot-90, #cue-preview img.rot-270 {
+  max-width: 160px; max-height: 100%;
+}
+#cue-preview .preview-caption {
+  color: var(--fg); line-height: 1.3; opacity: 0.95;
+}
+#cue-preview .preview-time {
+  color: var(--accent); font-variant-numeric: tabular-nums;
+  font-size: 0.75rem; margin-top: 4px; opacity: 0.85;
+}
+#cue-preview .preview-overlay-title {
+  color: rgb(255,200,100); font-weight: 500; margin-bottom: 4px;
+}
+#cue-preview .preview-overlay-line {
+  opacity: 0.9; margin-bottom: 2px;
+}
+.controls {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.5rem; flex-wrap: wrap;
+}
+button {
+  background: rgba(255,255,255,0.08);
+  color: var(--fg);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+  font-family: inherit;
+}
+button:hover { background: rgba(255,255,255,0.16); }
+button:active { transform: scale(0.97); }
+button.primary {
+  background: var(--accent); border-color: var(--accent);
+  font-weight: 500; min-width: 80px;
+}
+button.primary:hover { background: #6db1ff; }
+.time-info {
+  font-size: 0.82rem; color: var(--dim); text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.cue-counter {
+  font-size: 0.82rem; color: var(--dim); text-align: center;
+}
+audio { display: none; }
+/* Subtitle-style transcript shown while non-base-voice audio plays.
+   Anchored to bottom of <main>, color-coded by language. Outside #stage so
+   render() clearing stage.innerHTML doesn't blow it away. */
+#transcript {
+  position: absolute; left: 50%; bottom: 2.5rem;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.85);
+  padding: 0.6rem 1.2rem; border-radius: 10px;
+  font-size: 1.4rem; font-weight: 500; line-height: 1.35;
+  max-width: 92%; text-align: center;
+  pointer-events: none; z-index: 50;
+  opacity: 0; transition: opacity 0.18s ease;
+  white-space: pre-wrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+#transcript.visible { opacity: 1; }
+#transcript[data-lang="nl"] { color: #f0a868; border: 1px solid rgba(240,168,104,0.4); }
+#transcript[data-lang="de"] { color: #7ec77e; border: 1px solid rgba(126,199,126,0.4); }
+#transcript[data-lang="ar"] { color: #c89bf0; border: 1px solid rgba(200,155,240,0.4); direction: rtl; font-size: 1.6rem; }
+#transcript[data-lang="en"] { color: #4a9eff; border: 1px solid rgba(74,158,255,0.4); }
+#transcript[data-lang="es"] { color: #ff6b6b; border: 1px solid rgba(255,107,107,0.4); }
+#transcript[data-lang="he"] { color: #e8c547; border: 1px solid rgba(232,197,71,0.4); direction: rtl; font-size: 1.6rem; }
+#transcript[data-lang="sy"] { color: #4fd1c5; border: 1px solid rgba(79,209,197,0.4); direction: rtl; font-size: 1.6rem; }
+@media (max-width: 600px) {
+  header, footer, main { padding-left: 1rem; padding-right: 1rem; }
+  button { padding: 0.45rem 0.7rem; font-size: 0.88rem; }
+  .fallback .section-big { font-size: 1.5rem; }
+  .overlay .ov-title { font-size: 1.3rem; }
+  .overlay .ov-line { font-size: 1.2rem; }
+  #transcript { font-size: 1.05rem; padding: 0.45rem 0.8rem; bottom: 0.7rem; }
+  #transcript[data-lang="ar"] { font-size: 1.25rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="doc-title">🚗 CBR Theory — Day 6: Parking, Lights &amp; the Car Itself</div>
+  <div class="section-ribbon" id="section-ribbon">&nbsp;</div>
+</header>
+<main>
+  <div id="stage"></div>
+  <div id="transcript"></div>
+  <div id="pause-overlay">
+    <div class="pause-row"><span class="pause-icon">🎙️</span><span class="pause-prompt">Your turn — say it</span></div>
+    <div class="pause-bar"><i id="pause-bar-fill"></i></div>
+  </div>
+  <div id="caption"></div>
+</main>
+<footer>
+  <div id="scrubber">
+    <div id="scrubber-fill"></div>
+    <div id="scrubber-marks"></div>
+  </div>
+  <div class="controls">
+    <button id="prev-cue" title="Previous cue (↑)">⏮ Cue</button>
+    <button id="back-10" title="Back 10 seconds (←)">−10s</button>
+    <button id="play-pause" class="primary">Play</button>
+    <button id="fwd-10" title="Forward 10 seconds (→)">+10s</button>
+    <button id="next-cue" title="Next cue (↓)">Cue ⏭</button>
+  </div>
+  <div class="time-info">
+    <span id="t-current">0:00</span> / <span id="t-total">--:--</span>
+    <span style="margin: 0 0.5rem; opacity: 0.4;">·</span>
+    <span class="cue-counter" id="cue-counter">cue –</span>
+  </div>
+</footer>
+<div id="cue-preview"></div>
+<audio id="audio" src="audio.mp3" preload="auto"></audio>
+<script>
+const audio = document.getElementById("audio");
+const stage = document.getElementById("stage");
+const caption = document.getElementById("caption");
+const playPause = document.getElementById("play-pause");
+const scrubberFill = document.getElementById("scrubber-fill");
+const scrubber = document.getElementById("scrubber");
+const scrubberMarks = document.getElementById("scrubber-marks");
+const tCurrent = document.getElementById("t-current");
+const tTotal = document.getElementById("t-total");
+const cueCounter = document.getElementById("cue-counter");
+const sectionRibbon = document.getElementById("section-ribbon");
+
+const cues = [{"type": "image", "time": 0.087, "image": "photos/diagram-stop-vs-park.svg", "caption": "One legal split carries the whole topic: stopping is not parking", "rotation": 0, "explicit": true}, {"type": "image", "time": 84.236, "image": "photos/diagram-noparking-map.svg", "caption": "5 m from a junction, 5 m before a zebra, never across a driveway", "rotation": 0, "explicit": true}, {"type": "image", "time": 167.766, "image": "photos/diagram-lights.svg", "caption": "Dipped by default — and the rear fog light only under 50 metres", "rotation": 0, "explicit": true}, {"type": "image", "time": 223.054, "image": "photos/diagram-eco-vehicle.svg", "caption": "1.6 mm tread, a secured load — and the eco answers", "rotation": 0, "explicit": true}, {"type": "image", "time": 306.056, "image": "photos/diagram-stop-vs-park.svg", "caption": "Question 1 — dropping a passenger under each of the two signs", "rotation": 0, "explicit": true}, {"type": "image", "time": 333.306, "image": "photos/diagram-noparking-map.svg", "caption": "Question 2 — parking three metres from the corner", "rotation": 0, "explicit": true}, {"type": "image", "time": 360.647, "image": "photos/E10.png", "caption": "Question 3 — the blue-disc zone, max 2 hours", "rotation": 0, "explicit": true}, {"type": "image", "time": 388.565, "image": "photos/diagram-lights.svg", "caption": "Question 4 — mist, visibility about 200 metres, rear fog on?", "rotation": 0, "explicit": true}, {"type": "image", "time": 415.49, "image": "photos/diagram-eco-vehicle.svg", "caption": "Question 5 — which habit saves fuel?", "rotation": 0, "explicit": true}, {"type": "image", "time": 447.835, "image": "photos/diagram-noparking-map.svg", "caption": "The unsigned bans — the part worth re-reading tonight", "rotation": 0, "explicit": true}];
+const sections = [{"time": 21.062, "level": 2, "title": "1. Stopping versus parking — two words, two signs"}, {"time": 80.198, "level": 2, "title": "2. Where parking is forbidden with no sign at all"}, {"time": 164.278, "level": 2, "title": "3. Lights — one number to burn in"}, {"time": 218.641, "level": 2, "title": "4. The car itself — tread, load, and driving on the cheap"}, {"time": 296.243, "level": 2, "title": "5. Practice — five exam-style questions"}, {"time": 446.873, "level": 2, "title": "Closing"}];
+const langSegments = [{"start": 31.824, "end": 33.624, "lang": "nl", "text": "stilstaan"}, {"start": 41.16, "end": 42.936, "lang": "nl", "text": "parkeren"}, {"start": 109.416, "end": 111.192, "lang": "nl", "text": "uitrit"}, {"start": 145.776, "end": 148.08, "lang": "nl", "text": "parkeerschijfzone"}, {"start": 152.664, "end": 154.728, "lang": "nl", "text": "parkeerschijf"}, {"start": 247.32, "end": 249.096, "lang": "nl", "text": "APK"}, {"start": 288.408, "end": 290.256, "lang": "nl", "text": "milieuzone"}, {"start": 369.648, "end": 371.952, "lang": "nl", "text": "parkeerschijfzone"}];
+const pauseSegments = [];
+const docTitle = "CBR Theory — Day 6: Parking, Lights and the Car Itself";
+const transcript = document.getElementById("transcript");
+let currentCueIdx = -2;  // sentinel so initial render fires
+let currentSectionIdx = -2;
+let currentTranscriptKey = "";  // "start|end|lang" of the active segment
+
+// "Your turn" badge — driven entirely by playback position. The pause is real
+// silence baked into the audio, so there is no audio.pause()/setTimeout: we just
+// show the badge while currentTime is inside a pause segment and shrink the bar
+// by the fraction remaining. Works identically playing, scrubbed, or replayed.
+const pauseOverlay = document.getElementById("pause-overlay");
+const pauseBarFill = document.getElementById("pause-bar-fill");
+const findActivePause = t => {
+  for (let i = 0; i < pauseSegments.length; i++) {
+    const p = pauseSegments[i];
+    if (t >= p.start && t <= p.end) return p;
+  }
+  return null;
+};
+const updatePause = () => {
+  const p = findActivePause(audio.currentTime);
+  if (p) {
+    const frac = Math.max(0, Math.min(1, (p.end - audio.currentTime) / (p.end - p.start)));
+    pauseBarFill.style.transform = `scaleX(${frac})`;
+    pauseOverlay.classList.add("visible");
+  } else {
+    pauseOverlay.classList.remove("visible");
+  }
+};
+// Two drivers, deliberately. rAF gives a smooth countdown bar while the tab is
+// visible — but browsers throttle rAF to ZERO in a background tab, and a
+// 27-minute audio lesson spends most of its life backgrounded. That alone would
+// freeze the badge in whatever state it was in when you switched away (stuck on
+// screen, or never appearing). `timeupdate` keeps firing (~4 Hz) regardless, so
+// it guarantees correctness; rAF only adds smoothness on top.
+const rafPause = () => { updatePause(); requestAnimationFrame(rafPause); };
+if (pauseSegments.length) {
+  audio.addEventListener("timeupdate", updatePause);
+  audio.addEventListener("seeked", updatePause);
+  requestAnimationFrame(rafPause);
+}
+
+const findActiveLangSegment = t => {
+  // Linear scan — fine for hundreds of segments at audio-update rates.
+  // A 0.1s margin on each side smooths over float-precision edges.
+  for (let i = 0; i < langSegments.length; i++) {
+    const s = langSegments[i];
+    if (t >= s.start - 0.05 && t <= s.end + 0.05) return s;
+  }
+  return null;
+};
+
+const updateTranscript = t => {
+  const seg = findActiveLangSegment(t);
+  const key = seg ? `${seg.start}|${seg.end}|${seg.lang}` : "";
+  if (key === currentTranscriptKey) return;
+  currentTranscriptKey = key;
+  if (seg) {
+    transcript.textContent = seg.text;
+    transcript.dataset.lang = seg.lang;
+    transcript.classList.add("visible");
+  } else {
+    transcript.classList.remove("visible");
+  }
+};
+
+const fmt = s => {
+  if (!isFinite(s)) return "--:--";
+  const m = Math.floor(s / 60), sec = Math.floor(s % 60);
+  return `${m}:${sec.toString().padStart(2, "0")}`;
+};
+
+const findCueIndex = t => {
+  let idx = -1;
+  for (let i = 0; i < cues.length; i++) {
+    if (cues[i].time <= t) idx = i; else break;
+  }
+  return idx;
+};
+
+const findSectionIndex = t => {
+  let idx = -1;
+  for (let i = 0; i < sections.length; i++) {
+    if (sections[i].time <= t) idx = i; else break;
+  }
+  return idx;
+};
+
+const renderFallback = () => {
+  const sec = currentSectionIdx >= 0 ? sections[currentSectionIdx] : null;
+  stage.innerHTML = "";
+  const div = document.createElement("div");
+  div.className = "fallback";
+  const big = document.createElement("div");
+  big.className = "section-big";
+  big.dir = "auto";
+  big.textContent = sec ? sec.title : docTitle;
+  div.appendChild(big);
+  stage.appendChild(div);
+  caption.textContent = "";
+};
+
+const renderImage = cue => {
+  stage.innerHTML = "";
+  const img = new Image();
+  img.alt = cue.caption || "";
+  const rot = (cue.rotation || 0) % 360;
+  if (rot === 90) img.classList.add("rot-90");
+  else if (rot === 180) img.classList.add("rot-180");
+  else if (rot === 270) img.classList.add("rot-270");
+  if (rot) img.style.transform = `rotate(${rot}deg)`;
+  img.onload = () => {
+    stage.appendChild(img);
+    requestAnimationFrame(() => img.classList.add("visible"));
+  };
+  img.src = cue.image;
+  caption.textContent = cue.caption || "";
+};
+
+const renderOverlay = cue => {
+  stage.innerHTML = "";
+  const ov = document.createElement("div");
+  ov.className = "overlay";
+  if (cue.title) {
+    const t = document.createElement("div");
+    t.className = "ov-title";
+    t.textContent = cue.title;
+    ov.appendChild(t);
+  }
+  if (cue.lines && cue.lines.length) {
+    const wrap = document.createElement("div");
+    wrap.className = "ov-lines";
+    for (const ln of cue.lines) {
+      const l = document.createElement("div");
+      l.className = "ov-line";
+      l.textContent = ln;
+      wrap.appendChild(l);
+    }
+    ov.appendChild(wrap);
+  }
+  stage.appendChild(ov);
+  caption.textContent = "";
+};
+
+const renderVocab = cue => {
+  stage.innerHTML = "";
+  const card = document.createElement("div");
+  card.className = "vocab-card";
+  for (const e of (cue.entries || [])) {
+    const row = document.createElement("div");
+    row.className = "vocab-row lang-" + e.lang;
+    const lang = document.createElement("span");
+    lang.className = "vocab-lang vocab-lang-" + e.lang;
+    lang.textContent = LANG_LABEL[e.lang] || e.lang;
+    const word = document.createElement("span");
+    word.className = "vocab-word";
+    word.textContent = e.word;
+    if (e.lang === "ar" || e.lang === "he") { word.dir = "rtl"; word.style.fontSize = "1.3em"; }
+    row.appendChild(lang);
+    row.appendChild(word);
+    card.appendChild(row);
+  }
+  stage.appendChild(card);
+  caption.textContent = "";
+};
+
+// Drill card — the phrase for this rung, with the NEW chunk highlighted, a
+// readable transliteration, and the meaning. Stays up through the spoken
+// phrase, the "your turn" silence, and the confirm repeat.
+const renderDrill = cue => {
+  stage.innerHTML = "";
+  const card = document.createElement("div");
+  card.className = "drill-card";
+  card.dataset.lang = cue.lang || "en";
+  const phrase = document.createElement("div");
+  phrase.className = "drill-phrase";
+  const text = cue.phrase || "";
+  const nw = (cue.new || "").trim();
+  const at = nw ? text.indexOf(nw) : -1;
+  if (at !== -1) {
+    phrase.appendChild(document.createTextNode(text.slice(0, at)));
+    const span = document.createElement("span");
+    span.className = "new";
+    span.textContent = nw;
+    phrase.appendChild(span);
+    phrase.appendChild(document.createTextNode(text.slice(at + nw.length)));
+  } else {
+    phrase.textContent = text;
+  }
+  card.appendChild(phrase);
+  if (cue.read) {
+    const r = document.createElement("div");
+    r.className = "drill-read";
+    r.dir = "rtl";
+    r.textContent = cue.read;
+    card.appendChild(r);
+  }
+  if (cue.mean) {
+    const m = document.createElement("div");
+    m.className = "drill-mean";
+    m.dir = "rtl";
+    m.textContent = cue.mean;
+    card.appendChild(m);
+  }
+  if (cue.gloss) {
+    const g = document.createElement("div");
+    g.className = "drill-gloss";
+    g.textContent = cue.gloss;
+    card.appendChild(g);
+  }
+  const hint = document.createElement("div");
+  hint.className = "drill-hint";
+  hint.textContent = "listen · then repeat";
+  card.appendChild(hint);
+  stage.appendChild(card);
+  caption.textContent = "";
+};
+
+const RTL_ROLES = { he: 1, ar: 1, sy: 1, translit: 1 };
+// "sy" is our internal code for Aramaic — display it as ARAM, not SY.
+const LANG_LABEL = { sy: "aram" };
+const renderVerse = cue => {
+  stage.innerHTML = "";
+  const v = document.createElement("div");
+  v.className = "verse-slide";
+  const lines = cue.lines || [];
+  lines.forEach((l, i) => {
+    const el = document.createElement("div");
+    el.className = "verse-line role-" + l.role;
+    el.textContent = l.text;
+    if (RTL_ROLES[l.role]) el.dir = "rtl";
+    else if (l.role === "pair") el.dir = "ltr";
+    v.appendChild(el);
+    // Hairline between the scripts and the meaning, once.
+    const next = lines[i + 1];
+    if (next && RTL_ROLES[l.role] && !RTL_ROLES[next.role]) {
+      const r = document.createElement("div");
+      r.className = "verse-rule";
+      v.appendChild(r);
+    }
+  });
+  stage.appendChild(v);
+  caption.textContent = "";
+};
+
+const renderGap = cue => {
+  stage.innerHTML = "";
+  const g = document.createElement("div");
+  g.className = "gap-slide";
+  const tag = document.createElement("div");
+  tag.className = "gap-tag";
+  tag.textContent = cue.tier ? "Visual needed · tier " + cue.tier : "Visual needed";
+  g.appendChild(tag);
+  const txt = document.createElement("div");
+  txt.className = "gap-text";
+  txt.textContent = cue.gap_text || "";
+  g.appendChild(txt);
+  if (cue.note) {
+    const n = document.createElement("div");
+    n.className = "gap-meta";
+    n.textContent = cue.note;
+    g.appendChild(n);
+  }
+  stage.appendChild(g);
+  caption.textContent = "";
+};
+
+const setCue = (idx, sectionIdx) => {
+  const sectionChanged = sectionIdx !== currentSectionIdx;
+  // Stale-cue detection: an active cue placed before the current section
+  // began is lingering from a previous section — drop it so the section
+  // title shows instead of a stale image.
+  let effectiveIdx = idx;
+  if (effectiveIdx >= 0 && sectionIdx >= 0 &&
+      cues[effectiveIdx].time < sections[sectionIdx].time - 0.01) {
+    effectiveIdx = -1;
+  }
+  const cueChanged = effectiveIdx !== currentCueIdx;
+  if (sectionChanged) {
+    currentSectionIdx = sectionIdx;
+    const sec = sectionIdx >= 0 ? sections[sectionIdx] : null;
+    sectionRibbon.textContent = sec ? sec.title : "";
+  }
+  if (!cueChanged && !sectionChanged) return;
+  // When cue is unchanged but only section advanced AND there is an active
+  // cue, nothing to re-render.
+  if (!cueChanged && effectiveIdx >= 0) return;
+
+  currentCueIdx = effectiveIdx;
+  if (effectiveIdx < 0) {
+    renderFallback();
+    cueCounter.textContent = "cue –";
+    return;
+  }
+  const cue = cues[effectiveIdx];
+  if (cue.type === "overlay") renderOverlay(cue);
+  else if (cue.type === "vocab") renderVocab(cue);
+  else if (cue.type === "verse") renderVerse(cue);
+  else if (cue.type === "drill") renderDrill(cue);
+  else if (cue.type === "gap") renderGap(cue);
+  else renderImage(cue);
+  cueCounter.textContent = `cue ${effectiveIdx + 1} / ${cues.length}`;
+};
+
+const cuePreview = document.getElementById("cue-preview");
+
+const renderPreviewForCue = (cue) => {
+  cuePreview.innerHTML = "";
+  if (cue.type === "image") {
+    const img = new Image();
+    img.src = cue.image;
+    img.alt = cue.caption || "";
+    const rot = (cue.rotation || 0) % 360;
+    if (rot === 90) img.classList.add("rot-90");
+    else if (rot === 270) img.classList.add("rot-270");
+    if (rot) img.style.transform = `rotate(${rot}deg)`;
+    cuePreview.appendChild(img);
+    if (cue.caption) {
+      const cap = document.createElement("div");
+      cap.className = "preview-caption";
+      cap.textContent = cue.caption;
+      cuePreview.appendChild(cap);
+    }
+  } else if (cue.type === "overlay") {
+    if (cue.title) {
+      const t = document.createElement("div");
+      t.className = "preview-overlay-title";
+      t.textContent = cue.title;
+      cuePreview.appendChild(t);
+    }
+    for (const ln of (cue.lines || [])) {
+      const l = document.createElement("div");
+      l.className = "preview-overlay-line";
+      l.textContent = ln;
+      cuePreview.appendChild(l);
+    }
+  } else if (cue.type === "drill") {
+    const el = document.createElement("div");
+    el.className = "preview-overlay-line";
+    el.style.fontSize = "0.95rem";
+    el.dir = "auto";
+    el.textContent = cue.phrase || "";
+    cuePreview.appendChild(el);
+    if (cue.gloss) {
+      const g = document.createElement("div");
+      g.className = "preview-caption";
+      g.textContent = cue.gloss;
+      cuePreview.appendChild(g);
+    }
+  } else if (cue.type === "verse") {
+    for (const l of (cue.lines || [])) {
+      const el = document.createElement("div");
+      el.className = "preview-overlay-line verse-line role-" + l.role;
+      el.style.fontSize = "0.85rem";
+      el.textContent = l.text;
+      if (RTL_ROLES[l.role]) el.dir = "rtl";
+      cuePreview.appendChild(el);
+    }
+  } else if (cue.type === "vocab") {
+    for (const e of (cue.entries || [])) {
+      const l = document.createElement("div");
+      l.className = "preview-overlay-line vocab-lang-" + e.lang;
+      l.textContent = e.lang + "  " + e.word;
+      if (e.lang === "ar") l.dir = "rtl";
+      cuePreview.appendChild(l);
+    }
+  } else if (cue.type === "gap") {
+    const t = document.createElement("div");
+    t.className = "preview-overlay-title";
+    t.style.color = "#ff7a7a";
+    t.textContent = cue.tier ? "Visual needed · tier " + cue.tier : "Visual needed";
+    cuePreview.appendChild(t);
+    const l = document.createElement("div");
+    l.className = "preview-overlay-line";
+    l.textContent = cue.gap_text || "";
+    cuePreview.appendChild(l);
+    if (cue.note) {
+      const n = document.createElement("div");
+      n.className = "preview-overlay-line";
+      n.style.opacity = "0.6";
+      n.textContent = cue.note;
+      cuePreview.appendChild(n);
+    }
+  }
+  const tInfo = document.createElement("div");
+  tInfo.className = "preview-time";
+  tInfo.textContent = fmt(cue.time);
+  cuePreview.appendChild(tInfo);
+};
+
+const positionPreviewAt = (mark) => {
+  const rect = mark.getBoundingClientRect();
+  cuePreview.classList.add("visible");
+  // Measure after rendering, before final placement
+  const pw = cuePreview.offsetWidth;
+  const ph = cuePreview.offsetHeight;
+  let left = rect.left + rect.width / 2 - pw / 2;
+  left = Math.max(8, Math.min(window.innerWidth - pw - 8, left));
+  let top = rect.top - ph - 10;
+  if (top < 8) top = rect.bottom + 10;
+  cuePreview.style.left = left + "px";
+  cuePreview.style.top = top + "px";
+};
+
+const showPreview = (idx, mark) => {
+  if (idx < 0 || idx >= cues.length) return;
+  renderPreviewForCue(cues[idx]);
+  positionPreviewAt(mark);
+};
+
+const hidePreview = () => {
+  cuePreview.classList.remove("visible");
+  cuePreview.innerHTML = "";
+};
+
+audio.addEventListener("loadedmetadata", () => {
+  tTotal.textContent = fmt(audio.duration);
+  for (let i = 0; i < cues.length; i++) {
+    const cue = cues[i];
+    const mark = document.createElement("div");
+    mark.className = "cue-mark" + (cue.type === "overlay" ? " overlay-mark" : cue.type === "vocab" ? " vocab-mark" : cue.type === "verse" ? " verse-mark" : cue.type === "drill" ? " drill-mark" : cue.type === "gap" ? " gap-mark" : "");
+    mark.style.left = (100 * cue.time / audio.duration) + "%";
+    mark.dataset.cueIndex = String(i);
+    mark.title = (cue.caption || cue.title || cue.gap_text || "") + " — " + fmt(cue.time);
+    mark.addEventListener("mouseenter", () => showPreview(i, mark));
+    mark.addEventListener("mouseleave", hidePreview);
+    mark.addEventListener("click", e => {
+      e.stopPropagation();
+      audio.currentTime = cue.time;
+    });
+    scrubberMarks.appendChild(mark);
+  }
+});
+
+audio.addEventListener("timeupdate", () => {
+  const t = audio.currentTime;
+  scrubberFill.style.width = (100 * t / audio.duration) + "%";
+  tCurrent.textContent = fmt(t);
+  setCue(findCueIndex(t), findSectionIndex(t));
+  updateTranscript(t);
+});
+
+audio.addEventListener("play", () => playPause.textContent = "Pause");
+audio.addEventListener("pause", () => playPause.textContent = "Play");
+audio.addEventListener("ended", () => playPause.textContent = "Play");
+
+playPause.addEventListener("click", () => {
+  if (audio.paused) audio.play(); else audio.pause();
+});
+
+document.getElementById("back-10").addEventListener("click", () => {
+  audio.currentTime = Math.max(0, audio.currentTime - 10);
+});
+document.getElementById("fwd-10").addEventListener("click", () => {
+  audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 10);
+});
+
+document.getElementById("prev-cue").addEventListener("click", () => {
+  const t = audio.currentTime;
+  const idx = findCueIndex(t - 0.5);
+  if (idx > 0) audio.currentTime = cues[idx - 1].time;
+  else if (idx === 0) audio.currentTime = cues[0].time > 0.1 ? cues[0].time : 0;
+  else if (cues.length > 0) audio.currentTime = 0;
+});
+
+document.getElementById("next-cue").addEventListener("click", () => {
+  const idx = findCueIndex(audio.currentTime);
+  if (idx + 1 < cues.length) audio.currentTime = cues[idx + 1].time;
+  else if (audio.duration) audio.currentTime = audio.duration;
+});
+
+scrubber.addEventListener("click", e => {
+  const rect = scrubber.getBoundingClientRect();
+  const frac = (e.clientX - rect.left) / rect.width;
+  if (audio.duration) audio.currentTime = frac * audio.duration;
+});
+
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+  switch (e.code) {
+    case "Space": e.preventDefault(); playPause.click(); break;
+    case "ArrowLeft": document.getElementById("back-10").click(); break;
+    case "ArrowRight": document.getElementById("fwd-10").click(); break;
+    case "ArrowUp": e.preventDefault(); document.getElementById("prev-cue").click(); break;
+    case "ArrowDown": e.preventDefault(); document.getElementById("next-cue").click(); break;
+  }
+});
+
+// Initial render before audio loads
+setCue(-1, -1);
+</script>
+</body>
+</html>

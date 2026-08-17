@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1a1a1a"/>
+  <text x="640" y="70" font-family="Arial" font-size="50" font-weight="bold" fill="#fff" text-anchor="middle">Lines on the road are rules too</text>
+  <!-- left: solid line -->
+  <rect x="120" y="150" width="380" height="470" fill="#3a3a3a"/>
+  <line x1="310" y1="170" x2="310" y2="600" stroke="#f4f4f4" stroke-width="10"/>
+  <text x="310" y="655" font-family="Arial" font-size="34" font-weight="bold" fill="#ef4444" text-anchor="middle">SOLID line</text>
+  <text x="310" y="695" font-family="Arial" font-size="26" fill="#ddd" text-anchor="middle">do not cross</text>
+  <!-- right: dashed line -->
+  <rect x="780" y="150" width="380" height="470" fill="#3a3a3a"/>
+  <line x1="970" y1="170" x2="970" y2="600" stroke="#f4f4f4" stroke-width="10" stroke-dasharray="42 34"/>
+  <text x="970" y="655" font-family="Arial" font-size="34" font-weight="bold" fill="#22c55e" text-anchor="middle">DASHED line</text>
+  <text x="970" y="695" font-family="Arial" font-size="26" fill="#ddd" text-anchor="middle">you may cross when safe</text>
+  <text x="640" y="390" font-family="Arial" font-size="30" fill="#f0a868" text-anchor="middle" font-style="italic">solid = closed</text>
+  <text x="640" y="430" font-family="Arial" font-size="30" fill="#f0a868" text-anchor="middle" font-style="italic">dashed = open</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#1a1a1a"/>
+<text x="640.0" y="60" font-size="40" fill="#f5f5f5" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">The car itself — eco-driving and the legal minimums</text>
+<rect x="100" y="110" width="540" height="440" rx="18" fill="#262626" stroke="#7bc96f" stroke-width="3"/>
+<text x="370" y="165" font-size="32" fill="#7bc96f" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">eco-driving</text>
+<text x="140" y="225" font-size="25" fill="#f5f5f5" font-family="Helvetica,Arial">• shift up early — around 2,000–2,500 rpm</text>
+<text x="140" y="291" font-size="25" fill="#f5f5f5" font-family="Helvetica,Arial">• steady speed, look far ahead, brake less</text>
+<text x="140" y="357" font-size="25" fill="#f5f5f5" font-family="Helvetica,Arial">• right tyre pressure — soft tyres burn fuel</text>
+<text x="140" y="423" font-size="25" fill="#f5f5f5" font-family="Helvetica,Arial">• engine off when waiting long</text>
+<text x="140" y="489" font-size="25" fill="#f5f5f5" font-family="Helvetica,Arial">• roof box off when unused — drag is fuel</text>
+<rect x="680" y="110" width="500" height="440" rx="18" fill="#262626" stroke="#ffb454" stroke-width="3"/>
+<text x="930" y="165" font-size="32" fill="#ffb454" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">legal minimums</text>
+<text x="930" y="250" font-size="60" fill="#f5f5f5" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">1.6 mm</text>
+<text x="930" y="298" font-size="26" fill="#aaaaaa" text-anchor="middle" font-family="Helvetica,Arial">minimum tyre tread depth</text>
+<text x="930" y="380" font-size="26" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">load: secured, never covering</text>
+<text x="930" y="416" font-size="26" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">lights or number plate</text>
+<text x="930" y="490" font-size="26" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">mirrors and lights: clean, working</text>
+<text x="640.0" y="625" font-size="27" fill="#aaaaaa" text-anchor="middle" font-family="Helvetica,Arial">Old diesels: watch for the milieuzone — some city centres exclude them.</text>
+</svg>

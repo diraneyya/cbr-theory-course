@@ -1,0 +1,143 @@
+{
+  "cues": [
+    {
+      "type": "image",
+      "time": 0.087,
+      "image": "photos/diagram-exam-format.svg",
+      "caption": "50 questions, 44 to pass, one sitting — and read what is actually asked",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 97.138,
+      "image": "photos/diagram-hazard-scene.svg",
+      "caption": "Four classics: the ball, the parked car, the bus, the side road",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 163.638,
+      "image": "photos/intro-overview.svg",
+      "caption": "Day 1 — priority: the ladder decides who goes first",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 192.107,
+      "image": "photos/shape-system-overview.svg",
+      "caption": "Day 2 — signs: shape and colour before symbol",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 211.045,
+      "image": "photos/diagram-speed-ladder.svg",
+      "caption": "Day 3 — speed: the ladder, the zones, the lowest number",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 240.291,
+      "image": "photos/diagram-cast-overview.svg",
+      "caption": "Day 4 — road users: the more fragile, the more protected",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 270.815,
+      "image": "photos/diagram-alcohol-limits.svg",
+      "caption": "Day 5 — the driver: 0.2 for you, zero in practice",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 303.752,
+      "image": "photos/diagram-noparking-map.svg",
+      "caption": "Day 6 — the kerb: stopping ≠ parking, and the unsigned bans",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 342.002,
+      "image": "photos/diagram-hazard-scene.svg",
+      "caption": "Question 1 — the ball rolls out from between parked cars",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 369.925,
+      "image": "photos/diagram-hazard-scene.svg",
+      "caption": "Question 2 — the bus has stopped at the halte ahead",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 398.537,
+      "image": "photos/diagram-stop-vs-park.svg",
+      "caption": "Question 3 — 'just two minutes' under the X",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 427.592,
+      "image": "photos/diagram-daytime-100.svg",
+      "caption": "Question 4 — overtaking at 120, daytime motorway",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 458.476,
+      "image": "photos/diagram-exam-format.svg",
+      "caption": "Question 5 — 'may you' versus 'is it wise'",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 494.397,
+      "image": "photos/diagram-numbers-wall.svg",
+      "caption": "The numbers wall — and Monday, 09:00, Sloterdijk, reservation 6545",
+      "rotation": 0,
+      "explicit": true
+    }
+  ],
+  "sections": [
+    {
+      "time": 36.875,
+      "level": 2,
+      "title": "1. Reading the question — three different verbs"
+    },
+    {
+      "time": 93.1,
+      "level": 2,
+      "title": "2. Reading the street — the \"what could happen\" game"
+    },
+    {
+      "time": 159.689,
+      "level": 2,
+      "title": "3. The week in seven minutes — the full recap"
+    },
+    {
+      "time": 332.164,
+      "level": 2,
+      "title": "4. Practice — five insight-style questions"
+    },
+    {
+      "time": 492.61,
+      "level": 2,
+      "title": "Closing — exam day"
+    }
+  ]
+}

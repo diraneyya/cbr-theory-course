@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1a1a1a"/>
+  <!-- approach roads -->
+  <rect x="560" y="470" width="160" height="250" fill="#3a3a3a"/>
+  <rect x="0" y="320" width="1280" height="120" fill="#3a3a3a" opacity="0.35"/>
+  <!-- roundabout ring -->
+  <circle cx="640" cy="380" r="180" fill="none" stroke="#3a3a3a" stroke-width="120"/>
+  <circle cx="640" cy="380" r="72" fill="#2d5a2d"/>
+  <!-- direction arrows on ring (counter-clockwise, NL drives right so traffic goes clockwise? NL roundabouts: counter-clockwise) -->
+  <path d="M 460 380 A 180 180 0 0 1 640 200" fill="none" stroke="#f5c400" stroke-width="7" marker-end="url(#ar)"/>
+  <defs><marker id="ar" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><polygon points="0,0 12,6 0,12" fill="#f5c400"/></marker></defs>
+  <!-- car ON the roundabout (green = priority) -->
+  <rect x="440" y="345" width="120" height="80" rx="14" fill="#22c55e"/>
+  <text x="500" y="335" font-family="Arial" font-size="26" font-weight="bold" fill="#22c55e" text-anchor="middle">on ring = priority</text>
+  <!-- shark teeth at your entry -->
+  <g fill="#f4f4f4">
+    <polygon points="566,470 592,470 579,502"/>
+    <polygon points="600,470 626,470 613,502"/>
+    <polygon points="634,470 660,470 647,502"/>
+    <polygon points="668,470 694,470 681,502"/>
+    <polygon points="702,470 720,470 711,502"/>
+  </g>
+  <!-- YOU car approaching -->
+  <rect x="588" y="560" width="104" height="140" rx="16" fill="#3b82f6"/>
+  <polygon points="640,522 612,568 668,568" fill="#3b82f6"/>
+  <text x="640" y="645" font-family="Arial" font-size="30" font-weight="bold" fill="#fff" text-anchor="middle">YOU</text>
+  <text x="760" y="600" font-family="Arial" font-size="30" font-weight="bold" fill="#ef4444">shark teeth at entry → you yield</text>
+  <!-- titles -->
+  <text x="40" y="70" font-family="Arial" font-size="50" font-weight="bold" fill="#fff">Rotonde — the roundabout</text>
+  <text x="40" y="700" font-family="Arial" font-size="38" fill="#ff9f43" font-style="italic">traffic already on the ring has priority</text>
+</svg>

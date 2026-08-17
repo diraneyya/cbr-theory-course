@@ -1,0 +1,161 @@
+{
+  "cues": [
+    {
+      "type": "image",
+      "time": 0.075,
+      "image": "photos/diagram-cast-overview.svg",
+      "caption": "The cast — and the principle: the more fragile, the more protected",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 43.075,
+      "image": "photos/G11.png",
+      "caption": "The blue circle — a mandatory cycle path runs alongside your road",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 75.731,
+      "image": "photos/diagram-rightturn-cyclist.svg",
+      "caption": "You turn right, the cyclist goes straight — the cyclist goes FIRST",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 116.883,
+      "image": "photos/J24.png",
+      "caption": "Warning — crossing cyclists ahead",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 148.283,
+      "image": "photos/L2.png",
+      "caption": "The zebra crossing — pedestrians about to cross already have priority",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 194.744,
+      "image": "photos/diagram-moped-classes.svg",
+      "caption": "Blue plate = snorfiets, 25, cycle path. Yellow plate = bromfiets, 45, road",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 242.45,
+      "image": "photos/G12a.png",
+      "caption": "Bicycle and moped together — a shared path for both",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 270.387,
+      "image": "photos/J14.png",
+      "caption": "Tram crossing ahead — and remember: at equal crossings the tram wins",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 321.252,
+      "image": "photos/diagram-blindspot.svg",
+      "caption": "The dode hoek — front, right side, behind. Mirror test: seen or unseen",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 380.656,
+      "image": "photos/diagram-rightturn-cyclist.svg",
+      "caption": "Question 1 — you turn right, the cyclist rides straight on",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 405.349,
+      "image": "photos/L2.png",
+      "caption": "Question 2 — at the zebra: one walking their bike, one riding",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 432.224,
+      "image": "photos/diagram-moped-classes.svg",
+      "caption": "Question 3 — blue plate ahead of you in town",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 459.694,
+      "image": "photos/J14.png",
+      "caption": "Question 4 — equal intersection, tram from the LEFT",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 487.632,
+      "image": "photos/diagram-blindspot.svg",
+      "caption": "Question 5 — red light, truck in the right lane, space beside it",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 518.83,
+      "image": "photos/diagram-cast-overview.svg",
+      "caption": "Fragile goes first — and near trucks, the fragile one is you",
+      "rotation": 0,
+      "explicit": true
+    }
+  ],
+  "sections": [
+    {
+      "time": 38.513,
+      "level": 2,
+      "title": "1. Cyclists — the rule that catches every foreign driver"
+    },
+    {
+      "time": 144.558,
+      "level": 2,
+      "title": "2. Pedestrians — the zebra is theirs"
+    },
+    {
+      "time": 190.244,
+      "level": 2,
+      "title": "3. Mopeds — two classes, read the number plate"
+    },
+    {
+      "time": 265.762,
+      "level": 2,
+      "title": "4. Trams and buses — heavy, on rails, and favoured"
+    },
+    {
+      "time": 317.177,
+      "level": 2,
+      "title": "5. Trucks — the blind spot, and where not to be"
+    },
+    {
+      "time": 370.568,
+      "level": 2,
+      "title": "6. Practice — five exam-style questions"
+    },
+    {
+      "time": 517.867,
+      "level": 2,
+      "title": "Closing"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "cues": [
+    {
+      "type": "image",
+      "time": 0.075,
+      "image": "photos/intro-overview.svg",
+      "caption": "Priority & right-of-way — the three signs that decide who goes first",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 40.633,
+      "image": "photos/diagram-right-before-left.svg",
+      "caption": "Geen borden, geen haaientanden — voorrang van rechts",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 122.584,
+      "image": "photos/diagram-shark-teeth.svg",
+      "caption": "Haaientanden — de punten wijzen naar wie voorrang verleent",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 194.464,
+      "image": "photos/sign-B1-voorrangsweg.png",
+      "caption": "B1 — voorrangsweg (priority road)",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 228.916,
+      "image": "photos/sign-B6-verleen-voorrang.png",
+      "caption": "B6 — verleen voorrang (give way)",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 250.932,
+      "image": "photos/sign-B7-stop.png",
+      "caption": "B7 — stop (full stop, always)",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 277.11,
+      "image": "photos/diagram-roundabout.svg",
+      "caption": "Rotonde — verkeer op de rotonde heeft voorrang",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 323.783,
+      "image": "photos/intro-overview.svg",
+      "caption": "Some road users sit above the whole sign system",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "overlay",
+      "time": 410.06,
+      "title": "The priority checklist — stop at the first that applies",
+      "lines": [
+        "1. An emergency vehicle with lights AND siren? — everyone yields to it",
+        "2. A traffic light or a police officer directing? — obey it, it overrides signs",
+        "3. A priority sign or shark's teeth? — the sign or paint decides",
+        "4. A tram? — give way to it",
+        "5. None of the above? — right before left"
+      ]
+    },
+    {
+      "type": "image",
+      "time": 484.973,
+      "image": "photos/diagram-right-before-left.svg",
+      "caption": "Question 1 — car from your LEFT at an unmarked crossing",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 512.889,
+      "image": "photos/diagram-shark-teeth.svg",
+      "caption": "Question 2 — shark's teeth in your lane, car from the right",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 545.396,
+      "image": "photos/sign-B7-stop.png",
+      "caption": "Question 3 — a STOP sign, and an empty road",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 578.866,
+      "image": "photos/diagram-roundabout.svg",
+      "caption": "Question 4 — entering a roundabout, car already on the ring",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 608.925,
+      "image": "photos/sign-B1-voorrangsweg.png",
+      "caption": "Question 5 — you have priority, but an ambulance approaches",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 641.564,
+      "image": "photos/intro-overview.svg",
+      "caption": "Read every intersection from the top of the ladder down",
+      "rotation": 0,
+      "explicit": true
+    }
+  ],
+  "sections": [
+    {
+      "time": 37.084,
+      "level": 2,
+      "title": "1. The default rule — right before left"
+    },
+    {
+      "time": 118.847,
+      "level": 2,
+      "title": "2. When the road is painted — shark's teeth"
+    },
+    {
+      "time": 190.677,
+      "level": 2,
+      "title": "3. When there is a sign — the three you must know"
+    },
+    {
+      "time": 274.76,
+      "level": 2,
+      "title": "4. The roundabout"
+    },
+    {
+      "time": 320.207,
+      "level": 2,
+      "title": "5. Who beats everyone — the exceptions"
+    },
+    {
+      "time": 389.373,
+      "level": 2,
+      "title": "6. The order of authority — how to read any intersection"
+    },
+    {
+      "time": 470.51,
+      "level": 2,
+      "title": "7. Practice — five exam-style questions"
+    },
+    {
+      "time": 640.589,
+      "level": 2,
+      "title": "Closing"
+    }
+  ]
+}

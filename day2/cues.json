@@ -1,0 +1,201 @@
+{
+  "cues": [
+    {
+      "type": "image",
+      "time": 0.075,
+      "image": "photos/shape-system-overview.svg",
+      "caption": "Shape + colour tell you the category before you read the symbol",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 46.675,
+      "image": "photos/warn-J37-danger.png",
+      "caption": "Waarschuwingsbord — a warning, danger ahead",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 70.569,
+      "image": "photos/warn-J1-curve.png",
+      "caption": "Same triangle — the symbol names the specific hazard (uneven road)",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 84.444,
+      "image": "photos/warn-J24-cyclists.png",
+      "caption": "Triangle with a bicycle — crossing cyclists ahead",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 105.243,
+      "image": "photos/prohib-C2-noentry.png",
+      "caption": "Rood rond — verboden. This one: no entry",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 126.132,
+      "image": "photos/prohib-A1-50-speed.png",
+      "caption": "A red ring with a number — a speed limit (here 50)",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 142.857,
+      "image": "photos/prohib-C1-closed.png",
+      "caption": "Solid red ring, empty white centre — closed to all",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 154.986,
+      "image": "photos/prohib-F1-noovertaking.png",
+      "caption": "Two cars, one red — no overtaking",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 173.586,
+      "image": "photos/mand-D5-turnright.png",
+      "caption": "Blauw rond — a command. This one: you must turn right",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 193.528,
+      "image": "photos/mand-D1-roundabout.png",
+      "caption": "Blue circle, circular arrows — mandatory roundabout direction",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 209.627,
+      "image": "photos/mand-G11-cyclepath.png",
+      "caption": "Blue circle with a bicycle — compulsory cycle path",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 230.965,
+      "image": "photos/info-E4-parking.png",
+      "caption": "Blauw vierkant — information. The white P: parking",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 247.732,
+      "image": "photos/info-G1-motorway.png",
+      "caption": "Blue square with a motorway symbol — you are on the autosnelweg",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 273.471,
+      "image": "photos/diagram-road-markings.svg",
+      "caption": "Doorgetrokken streep vs onderbroken streep — solid vs dashed",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 331.118,
+      "image": "photos/warn-J24-cyclists.png",
+      "caption": "Question 1 — what does this red triangle require you to do?",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 358.781,
+      "image": "photos/prohib-C2-noentry.png",
+      "caption": "Question 2 — red disc with a white bar",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 378.606,
+      "image": "photos/mand-D5-turnright.png",
+      "caption": "Question 3 — blue circle, white arrow curving right",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 400.568,
+      "image": "photos/prohib-A1-50-speed.png",
+      "caption": "Question 4 — a red ring around the number 50",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 423.344,
+      "image": "photos/diagram-road-markings.svg",
+      "caption": "Question 5 — a solid centre line on your side",
+      "rotation": 0,
+      "explicit": true
+    },
+    {
+      "type": "image",
+      "time": 454.115,
+      "image": "photos/shape-system-overview.svg",
+      "caption": "Shape first, symbol second — every time",
+      "rotation": 0,
+      "explicit": true
+    }
+  ],
+  "sections": [
+    {
+      "time": 43.675,
+      "level": 2,
+      "title": "1. Red triangle — warning"
+    },
+    {
+      "time": 102.131,
+      "level": 2,
+      "title": "2. Red circle — prohibition"
+    },
+    {
+      "time": 170.399,
+      "level": 2,
+      "title": "3. Blue circle — mandatory"
+    },
+    {
+      "time": 227.715,
+      "level": 2,
+      "title": "4. Blue square — information"
+    },
+    {
+      "time": 269.559,
+      "level": 2,
+      "title": "5. Road markings — the lines are rules too"
+    },
+    {
+      "time": 321.031,
+      "level": 2,
+      "title": "6. Practice — five exam-style questions"
+    },
+    {
+      "time": 453.127,
+      "level": 2,
+      "title": "Closing"
+    }
+  ]
+}

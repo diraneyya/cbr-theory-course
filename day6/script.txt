@@ -1,0 +1,49 @@
+Welcome to day six — the last block of rules before tomorrow's final day of pure exam insight. Today is the "everything else" chapter: where a car may stand still, what must shine and grip on it, and the eco-driving questions the exam sprinkles in for easy points. It opens with a legal split that carries the whole parking topic, so let us start there.
+
+1. Stopping versus parking — two words, two signs.
+
+Dutch law separates stopping from parking, and the exam leans on the difference constantly. Stopping — [nl: stilstaan] — is the brief halt: letting a passenger in or out, loading or unloading, and no longer than that takes. Parking — [nl: parkeren] — is everything beyond it: leaving the car, waiting, anything that is not that brief functional stop. Now look at the two signs on screen. The blue circle with a single red slash forbids parking — but because stopping is legally a different act, you may still halt there briefly for passengers or goods. The blue circle with the red X forbids stopping — and that is the total ban: if you may not even stop, you certainly may not park. Slash, one ban; cross, both. The classic exam question puts a passenger drop-off under each sign: under the slash, legal; under the X, an offence.
+
+2. Where parking is forbidden with no sign at all.
+
+Most parking bans are never signposted — the law places them automatically, and the exam expects you to know them cold. Within five metres of a junction: forbidden, on every corner, because a parked car there blinds everyone's sightlines. Within five metres before a zebra crossing: forbidden, so that a pedestrian stepping out is visible instead of appearing from behind your boot. Across a driveway — an [nl: uitrit] — never, even briefly, even "just two minutes". And a family of automatic bans you can reason out: not on the cycle path or a marked cycle lane, not at a bus stop, not on the pavement. The kerb paint from day two's world of markings finishes the set: a dashed yellow line along the kerb means no parking; a solid yellow line means no stopping — paint versions of the two signs you just learned.
+
+One more parking institution, this one signed: the blue zone. A parking sign with the little blue disc symbol and a time — "max two hours" — marks a [nl: parkeerschijfzone]: parking is free but rationed, and you must display a parking disc — a [nl: parkeerschijf] — on your dashboard showing your arrival time, rounded up to the next half hour. No disc, or an overstayed one, and the free space becomes a fine.
+
+3. Lights — one number to burn in.
+
+The light rules are short, but one of them carries a number the exam adores. Dipped headlights are your default: at night, in tunnels, in rain and poor visibility — whenever seeing or being seen degrades, dipped beam on. High beam adds reach on dark open roads, but never against oncoming traffic and never while following close behind someone — you switch down the moment your light can blind. Front fog lights may come on when fog, snowfall or heavy rain seriously cuts visibility. And now the number: the rear fog light — that piercing red lamp — may only be used when visibility drops below fifty metres. Above fifty metres it is not cautious, it is an offence: it glares into the eyes of the driver behind and masks your brake lights. Fifty metres is roughly two lamp posts — if you can see further than that, the rear fog light stays off.
+
+4. The car itself — tread, load, and driving on the cheap.
+
+The vehicle facts first. Tyres must have at least one point six millimetres of tread depth — below that they are illegal and, in rain, genuinely dangerous, because tread is what channels water away. Any load must be secured so it cannot shift or fall, and it may never cover your lights or your number plate; if it protrudes, it must be marked. Mirrors and lights: present, clean, working — the [nl: APK] from yesterday checks them yearly, but the daily responsibility is yours.
+
+Then eco-driving, where the exam's logic is simple: the answer that burns less fuel is the right one. Shift up early — around two thousand to twenty-five hundred revs — because a low engine speed in a high gear is the efficient place to be. Hold a steady speed and look far ahead so you brake less; every brake throws away motion you paid fuel for. Keep tyres at the right pressure — soft tyres drag. Switch the engine off when you wait long, and take the roof box off when it is empty, because drag eats fuel at speed. And a modern footnote: some city centres are a [nl: milieuzone] — an environmental zone that excludes the oldest diesels; the sign at the boundary tells you which.
+
+5. Practice — five exam-style questions.
+
+My own questions in the exam's style — drill the reasoning. Pause, decide, then listen.
+
+Question one. You want to let a passenger out of the car. May you do it under the sign with the single red slash? And under the sign with the red X?
+
+Under the slash, yes — that sign forbids parking, and a brief halt for a passenger is stopping, a different legal act. Under the X, no — that is the stopping ban, and even a ten-second drop-off violates it. One picture, both rules; the exam rarely asks one without offering the other as the trap.
+
+Question two. You find a gap three metres from the corner of a junction. No signs anywhere. May you park?
+
+No. The five-metre rule needs no sign — within five metres of a junction, parking is automatically forbidden, and three is inside it. The same logic guards the five metres before a zebra and every driveway. "There was no sign" is precisely the wrong argument: the most important parking bans never have one.
+
+Question three. You park inside this zone at a quarter past one and walk off without doing anything else. Legal?
+
+Not yet. In a [nl: parkeerschijfzone] you must set a parking disc to your arrival time — rounded up, so half past one — and lay it visibly on the dashboard. With the disc set you may stay the posted maximum, two hours here. Without it, the parking itself is the offence, however short you stay.
+
+Question four. Evening mist; you judge visibility at about two hundred metres. May you switch on the rear fog light?
+
+No. The rear fog light is legal only below fifty metres of visibility, and two hundred is four times that. Dipped headlights are the correct response to mist like this. Using the rear fog lamp too eagerly is not a safety bonus — it dazzles the driver behind, which is exactly why the law pins it to a number.
+
+Question five. Which of these saves fuel: shifting up early, or keeping the engine in a lower gear at higher revs "for control"?
+
+Shifting up early. High revs burn fuel; a modern engine pulls happily at two thousand revs in a higher gear, and that is where consumption drops. On any eco question, pick the calm option: early upshifts, steady speed, anticipation, correct tyre pressure, engine off when waiting. If an answer sounds sporty, it is wrong.
+
+Closing.
+
+That is the car-and-kerb chapter. Stopping is not parking — slash bans one, cross bans both. The unsigned bans do the real work: five metres from junctions and zebras, never a driveway, never the cycle lane, and the yellow kerb lines echo the two signs. The blue zone wants its disc. Lights: dipped by default, rear fog only under fifty metres. The car needs one point six millimetres of tread and a load that cannot move or hide a light. And eco questions always take the calm answer. Tomorrow is the last day: insight and hazard anticipation — how the exam thinks, and how to read the questions themselves. Well done.

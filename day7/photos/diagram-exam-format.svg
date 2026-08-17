@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#1a1a1a"/>
+<text x="640.0" y="64" font-size="42" fill="#f5f5f5" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">The exam — one sitting, three numbers</text>
+<circle cx="260" cy="250" r="100" fill="#262626" stroke="#4d9de0" stroke-width="6"/>
+<text x="260" y="272" font-size="64" fill="#4d9de0" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">50</text>
+<text x="260" y="400" font-size="26" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">questions, one continuous set</text>
+<circle cx="640" cy="250" r="100" fill="#262626" stroke="#7bc96f" stroke-width="6"/>
+<text x="640" y="272" font-size="64" fill="#7bc96f" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">44</text>
+<text x="640" y="400" font-size="26" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">correct to pass</text>
+<circle cx="1020" cy="250" r="100" fill="#262626" stroke="#ffb454" stroke-width="6"/>
+<text x="1020" y="272" font-size="64" fill="#ffb454" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">~30</text>
+<text x="1020" y="400" font-size="26" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">minutes — pace, don't rush</text>
+<rect x="150" y="460" width="980" height="180" rx="16" fill="#262626" stroke="#444" stroke-width="2"/>
+<text x="640.0" y="512" font-size="28" fill="#ffb454" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">Read the question, not your assumption:</text>
+<text x="640.0" y="556" font-size="26" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">"may you" (legal?) ≠ "is it wise" (safe?) ≠ "must you" (obliged?)</text>
+<text x="640.0" y="600" font-size="26" fill="#aaaaaa" text-anchor="middle" font-family="Helvetica,Arial">when two answers both seem right, take the more careful one</text>
+</svg>

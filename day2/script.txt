@@ -1,0 +1,69 @@
+Welcome to day two. Yesterday was priority — who goes first. Today is the language the rest of the exam is written in: signs. There look like dozens to learn, but there is a system underneath, and once you have it you never memorise a catalogue again. Here is the whole idea on one screen.
+
+The shape and the colour of a sign tell you its category before you even look at the picture inside it. Red means a restriction. Blue means an instruction. And the outline refines it: a red triangle warns you, a red circle forbids you, a blue circle commands you, a blue square merely informs you. Learn those four and every sign you meet drops into one of them. Let us take them one at a time.
+
+1. Red triangle — warning.
+
+A red-bordered triangle standing on its base is a warning — in Dutch a [nl: waarschuwingsbord]. It never tells you to do anything; it tells you what is coming so you can prepare. The symbol inside names the danger. This one, an exclamation mark, is the general "danger" sign — something ahead that the other symbols do not cover; slow down and read the road.
+
+Same red triangle, different symbol — so you already know, before reading it, that this is a warning. This one shows an uneven road surface: a bump or rough patch ahead. You do not have to do anything by law, but you ease off.
+
+And this one — the triangle again, now with a bicycle — warns of crossing cyclists ahead. The exam pattern is simple: if it is a red triangle, the answer is never "you must" or "you may not"; it is always "be aware, this is coming". Read the symbol only to know what is coming.
+
+2. Red circle — prohibition.
+
+Now a red circle. A red circle is a prohibition — in Dutch [nl: verboden], forbidden. It tells you something you may not do. This one, the solid red disc with a single white bar, is one every driver knows: no entry — [nl: eenrichtingsweg] from the other side; you may not drive in.
+
+A red ring with a number inside is a speed limit — the maximum, in kilometres per hour. This one is fifty. It is still the red-circle family: it forbids you from going faster than the number. The limit holds until another speed sign changes it or you leave the zone.
+
+This plain red ring with an empty white centre means the road is closed to traffic in both directions — [nl: gesloten] — nobody may drive through. Empty middle, total prohibition.
+
+And this red circle with two cars, the left one red, means no overtaking — you may not pass the car in front. Notice the thread through all four: red circle, and every meaning is a "may not". The symbol only tells you what is forbidden.
+
+3. Blue circle — mandatory.
+
+Now the colour flips to blue, and with it the whole meaning flips from restriction to instruction. A blue circle is mandatory — in Dutch a [nl: gebod], a command; it tells you what you must do. This one, a white arrow curving right, means you must turn right. Not "may" — must.
+
+This blue circle with three arrows chasing each other is the roundabout sign — [nl: rotonde] — and it commands the direction you must go around: follow the arrows. You met the roundabout's priority rule yesterday; this is the sign that marks one.
+
+And this blue circle with a bicycle is a compulsory cycle path — [nl: verplicht fietspad]. For a cyclist it is a command: you must use this path. For you in a car it is the counterpart — that lane is for bikes, keep off. Blue circle, always a "must".
+
+4. Blue square — information.
+
+The last shape is the calm one. A blue square or rectangle just gives you information — it does not restrict and it does not command. This white P on blue is the friendliest sign on the road: [nl: parkeergelegenheid], a place where you are allowed to park.
+
+And this blue square with the little bridge-and-road symbol tells you that you are entering a motorway — [nl: autosnelweg]. Notice it is blue here, not green as in some countries — a detail the exam likes. It is information: it tells you the road type, and with it the motorway rules now apply — but the sign itself is just announcing, not ordering.
+
+5. Road markings — the lines are rules too.
+
+Signs are on poles; the road itself also carries rules, painted on. The two you must know are the centre lines. A solid line — [nl: doorgetrokken streep] — you may not cross: treat it like a wall. A dashed line — [nl: onderbroken streep] — you may cross when it is safe, for example to overtake. Solid is closed, dashed is open. Where you see a solid and a dashed line side by side, the rule is read from your side: if the solid one is nearest you, you may not cross.
+
+And recall yesterday's most important marking, still in the "paint is a rule" family: the shark's teeth, [nl: haaientanden], painted across your lane mean give way. Paint carries the same authority as a sign.
+
+6. Practice — five exam-style questions.
+
+My own questions in the exam's style — drill the reasoning. Pause, decide, then listen.
+
+Question one. You see a red-bordered triangle with a bicycle inside. Does it require you to stop or give way?
+
+No. It is a red triangle, so it is a warning, and a warning never requires an action — it informs you that crossing cyclists are ahead. You stay alert and be ready, but the sign itself commands nothing. If the exam offers "you must stop" or "you must give way" for a triangle, those are traps; the answer is "be aware".
+
+Question two. A solid red disc with one horizontal white bar. What does it mean?
+
+No entry — you may not drive in. It is the red-circle family, so it is a prohibition, and this particular one closes the road to you from this direction; it is usually the exit of a one-way street. Red circle, a "may not".
+
+Question three. A blue circle with a white arrow curving to the right. May you go straight on instead?
+
+No — you must turn right. A blue circle is mandatory, a command, not a suggestion. The arrow is not showing you one option; it is the only permitted direction. Blue circle equals "must", so going straight is not allowed.
+
+Question four. A red ring around the number fifty. You are currently doing sixty-five. Are you within the law?
+
+No. The red ring with a number is a speed limit — the maximum — and it forbids going faster than fifty. At sixty-five you are over it. It stays in force until another speed sign or the end of the zone; you do not get to assume it has lapsed.
+
+Question five. The centre line next to you is a single solid line. A slow tractor is ahead and the road looks clear. May you cross the line to overtake?
+
+No. A solid line — [nl: doorgetrokken streep] — may not be crossed, clear road or not. Dashed would let you cross when safe; solid does not, however tempting the empty road. Same trap as yesterday's stop sign: "it looks clear" never overrides a solid rule.
+
+Closing.
+
+That is the sign system. You never memorised a catalogue — you learned four shapes. Red triangle warns, red circle forbids, blue circle commands, blue square informs; and on the road, solid line closed, dashed line open. When a sign question comes up, read the shape and colour first, drop it into its category, then read the symbol for the detail. Tomorrow, day three: speed limits and the zones they live in — where those numbers apply, and the default limits when there is no sign at all. Well done.

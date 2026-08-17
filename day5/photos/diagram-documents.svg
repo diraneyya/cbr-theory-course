@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#1a1a1a"/>
+<text x="640.0" y="64" font-size="42" fill="#f5f5f5" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">The paperwork — what must be in order, always</text>
+<rect x="70" y="150" width="480" height="200" rx="16" fill="#262626" stroke="#4d9de0" stroke-width="3"/>
+<text x="310" y="205" font-size="32" fill="#4d9de0" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">driving licence</text>
+<text x="310" y="245" font-size="26" fill="#ffb454" text-anchor="middle" font-style="italic" font-family="Helvetica,Arial">rijbewijs</text>
+<text x="310" y="290" font-size="24" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">carry it, show on demand</text>
+<rect x="730" y="150" width="480" height="200" rx="16" fill="#262626" stroke="#7bc96f" stroke-width="3"/>
+<text x="970" y="205" font-size="32" fill="#7bc96f" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">registration card</text>
+<text x="970" y="245" font-size="26" fill="#ffb454" text-anchor="middle" font-style="italic" font-family="Helvetica,Arial">kentekenbewijs</text>
+<text x="970" y="290" font-size="24" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">proves the car is yours/registered</text>
+<rect x="70" y="400" width="480" height="200" rx="16" fill="#262626" stroke="#ffb454" stroke-width="3"/>
+<text x="310" y="455" font-size="32" fill="#ffb454" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">WA insurance</text>
+<text x="310" y="495" font-size="26" fill="#ffb454" text-anchor="middle" font-style="italic" font-family="Helvetica,Arial">verzekering</text>
+<text x="310" y="540" font-size="24" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">third-party liability — MANDATORY</text>
+<rect x="730" y="400" width="480" height="200" rx="16" fill="#262626" stroke="#c89bf0" stroke-width="3"/>
+<text x="970" y="455" font-size="32" fill="#c89bf0" text-anchor="middle" font-weight="bold" font-family="Helvetica,Arial">APK inspection</text>
+<text x="970" y="495" font-size="26" fill="#ffb454" text-anchor="middle" font-style="italic" font-family="Helvetica,Arial">keuring</text>
+<text x="970" y="540" font-size="24" fill="#f5f5f5" text-anchor="middle" font-family="Helvetica,Arial">periodic technical check — valid</text>
+<text x="640.0" y="670" font-size="28" fill="#aaaaaa" text-anchor="middle" font-family="Helvetica,Arial">Without valid WA insurance or APK, the car may not be on the public road at all.</text>
+</svg>

@@ -1,0 +1,83 @@
+Welcome to day one. You have driven for years, so this course is not going to teach you how to drive. It is going to teach you the Dutch rules — and priority is where your instincts, trained on other roads, are most likely to betray you. So we start here, on the single most-tested and most-misjudged topic on the exam.
+
+The whole subject answers one question, asked over and over in different clothes: at this intersection, who goes first? In Dutch, priority is [nl: voorrang] — literally "before-going", the right to go before the other person. Let us build the rules from the ground up.
+
+1. The default rule — right before left.
+
+Picture the hardest case first: a crossing with no traffic lights, no signs, no road markings at all. Two roads of equal rank simply meet. Who goes first?
+
+The Dutch rule is [nl: voorrang van rechts] — priority to the right. Traffic coming from your right-hand side goes first, and you give way to it. In this picture you are the blue car at the bottom. The orange car is approaching from your right. There is nothing on the road to decide it — so the right-hand car wins, and you wait.
+
+Here is where your gut may mislead you. On many roads outside the Netherlands, the bigger or busier road quietly "feels" like the main one, and drivers behave that way. In the Netherlands, at an unmarked equal crossing, size and busyness mean nothing. Only one thing matters: is the other car on your right? If yes, you yield. Burn that in, because the exam loves the plain crossing with no signs — it is testing whether you default to [nl: voorrang van rechts] instead of guessing from the width of the road.
+
+And a subtlety the exam also tests: this applies to all road users on your right, not just cars. A moped, a cyclist on the carriageway, a tractor — if it comes from your right at an equal crossing, it has [nl: voorrang].
+
+2. When the road is painted — shark's teeth.
+
+Most real intersections are not left to the default. The Netherlands tells you who has priority, and often it does so with paint on the road rather than a sign on a pole. The most important marking has a wonderful name.
+
+These white triangles painted across the road are [nl: haaientanden] — shark's teeth. They mean: give way. The trick to reading them is the direction the points face. The teeth always point towards the driver who must yield. In this picture the points aim back at you, the blue car — so you give way to the traffic crossing in front of you.
+
+Two things the exam checks here. First, [nl: haaientanden] mean give way — not stop. You slow, you assess, and if it is clear you may roll through without stopping. You only must come to a full stop if there is an actual stop sign, which we will meet in a moment. Second — and this is the one that catches experienced drivers — shark's teeth override the right-before-left rule. If you see the teeth pointing at you, it does not matter that a car is on your left or your right; the paint has already decided, and you yield. Paint beats the default.
+
+3. When there is a sign — the three you must know.
+
+Signs on poles do the same job as paint, and three of them govern priority. Learn their shapes, because on the exam you often get the sign without a word of explanation.
+
+This yellow diamond is [nl: voorrangsweg] — a priority road. When you are driving on the road with this sign, you have priority over the traffic joining from the side roads. It is the good sign: it means the crossing traffic must wait for you. When the yellow diamond has a white border, you are on the priority road; a version with a diagonal bar through it means the priority road is ending.
+
+This red-bordered downward triangle is the pole version of the shark's teeth: [nl: verleen voorrang], give way. Same meaning — yield to the crossing traffic, but you need not stop if it is clear. You will very often see this triangle on the pole and the shark's teeth painted on the road at the same crossing; they are saying the identical thing, twice, so you cannot miss it.
+
+And this red octagon is the one absolute in the whole topic: [nl: stop]. You must come to a complete stop — wheels stationary — at the line, every time, even if you can see the road is empty. This is the difference the exam probes constantly: give way lets you roll through when clear; stop never does. If the sign is the octagon, your wheels stop turning. No exceptions.
+
+4. The roundabout.
+
+The Dutch love a roundabout — [nl: rotonde] — and it has its own priority logic that is worth one clear picture.
+
+On the great majority of Dutch roundabouts, traffic already on the ring has priority, and you — approaching, the blue car — give way as you enter. You will usually find shark's teeth painted right at the entry to tell you exactly that. So the rule is simple: entering, you yield to whoever is already going around.
+
+One Dutch-specific habit the exam rewards: exit signalling. You do not signal when you enter a roundabout, but you do put on your right indicator as you leave it, to tell the drivers waiting to enter that you are coming off. It feels fussy, but it is expected here, and questions test it.
+
+5. Who beats everyone — the exceptions.
+
+A few road users sit above the whole priority system. Learn them as a short list, because the exam likes to drop one into an otherwise ordinary crossing to see if you remember that the normal rules pause.
+
+An emergency vehicle — [nl: voorrangsvoertuig] — with blue lights and siren together has priority over everything and everyone. Lights and siren both on: you make way, even if you had priority a second ago, even if your own light is green. That is the one situation where you may, carefully, do something you normally could not, such as edging past a red light to clear a path — only when it is safe.
+
+The other special case is the tram. A [nl: tram] almost always has priority — it is heavy, rail-bound, and cannot swerve. The rule to remember: a tram generally goes before you, even when it is coming from your left, which is the exact case that trips people who are relying on right-before-left. The one narrow exception is where you are on a marked priority road and the tram faces shark's teeth — but the safe default, and the exam-safe answer, is: give way to the tram.
+
+6. The order of authority — how to read any intersection.
+
+Now let us tie it into one decision procedure, because the exam question is never "what does this sign mean" in isolation — it is "here is a whole scene, who goes first". Read every intersection in this fixed order, top down, and stop at the first rule that applies.
+
+The priority checklist — stop at the first that applies. 1. An emergency vehicle with lights AND siren? — everyone yields to it. 2. A traffic light or a police officer directing? — obey it, it overrides signs. 3. A priority sign or shark's teeth? — the sign or paint decides. 4. A tram? — give way to it. 5. None of the above? — right before left.
+
+That order is the whole topic in one ladder. A live emergency vehicle overrides a green light. A working traffic light overrides a priority sign. A sign or paint overrides the default. And only when the intersection is truly bare — no vehicle, no light, no sign, no paint, no tram — do you fall back to [nl: voorrang van rechts]. Most wrong answers on the exam come from applying a lower rule while a higher one was sitting right there in the picture. Read from the top every time.
+
+7. Practice — five exam-style questions.
+
+These are my own questions in the exam's style — the real CBR question bank is secret, so drill the reasoning, not memorised items. Pause on each, decide, then listen.
+
+Question one. An unmarked crossroads — no signs, no lights, no markings. A car approaches from your left. Do you have priority?
+
+Yes — you go first. The rule is [nl: voorrang van rechts], priority to the right. A car on your left must yield to you. The exam is checking that you do not simply give way out of caution; when the other vehicle is on your left at an equal crossing, the priority is yours. Take it.
+
+Question two. You approach a crossing. Shark's teeth are painted across your lane, and a car is coming from your right. May you drive on without stopping?
+
+You give way — but you need not come to a full stop. The [nl: haaientanden] mean give way, not stop; if the road is genuinely clear you may roll through. But here a car is coming, so you yield to it and wait. The trap in this question is the word "stopping": some drivers think teeth mean stop. They do not — only the octagon does.
+
+Question three. The same crossing, but now there is a red octagonal stop sign instead of the shark's teeth. The road looks completely empty. What must you do?
+
+You must come to a complete stop — wheels fully stationary — at the line, even though it looks empty. This is the one absolute. [nl: stop] is [nl: stop]. The exam pairs this with question two deliberately: same empty road, different marking, opposite required action. Give way lets you flow; stop never does.
+
+Question four. You are entering a roundabout. A car is already going around the ring, to your left. Who has priority?
+
+The car already on the [nl: rotonde] has priority; you give way as you enter. The detail designed to catch you is "to your left" — your right-before-left instinct screams that you may go, but on the roundabout the ring traffic wins regardless of side, and there are almost always shark's teeth at your entry confirming it. Yield, then enter when clear.
+
+Question five. You have priority on a clearly marked priority road. An ambulance approaches the crossing with its blue lights and siren on. Do you keep going?
+
+No — you give way to the ambulance. A [nl: voorrangsvoertuig] with lights and siren overrides your priority completely. This is the top of the ladder from section six: an emergency vehicle beats a priority road, beats a green light, beats everything. Having priority a moment ago does not matter; you make way.
+
+Closing.
+
+That is priority. Notice that almost every trap was the same shape: a lower rule felt right, but a higher one was present in the picture. So carry the ladder — emergency vehicle, then lights or police, then signs and paint, then tram, then right-before-left — and read every intersection from the top. Tomorrow, day two: traffic signs and road markings, the vocabulary that makes the rest of the exam readable. Well done today.
