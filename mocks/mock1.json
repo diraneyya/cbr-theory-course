@@ -1,0 +1,594 @@
+{
+ "name": "Mock Exam 1",
+ "questions": [
+  {
+   "t": "priority",
+   "img": "../day1/photos/diagram-right-before-left.svg",
+   "q": "You approach an unmarked, equal intersection. A car approaches from your right. Who goes first?",
+   "a": [
+    "You — you arrived first",
+    "The car from the right",
+    "Whoever is faster"
+   ],
+   "c": 1,
+   "e": "At an equal intersection with no signs or lights, right-before-left applies: traffic from the right goes first. Arrival order and speed are irrelevant."
+  },
+  {
+   "t": "priority",
+   "img": "../day1/photos/sign-B7-stop.png",
+   "q": "You reach a stop sign. The crossing road is clearly empty in both directions. What must you do?",
+   "a": [
+    "Slow down and continue if clear",
+    "Come to a complete stop, then proceed",
+    "Sound your horn and continue"
+   ],
+   "c": 1,
+   "e": "The stop sign always requires a full stop — even when the road is visibly empty. Rolling through slowly is the classic exam trap."
+  },
+  {
+   "t": "priority",
+   "img": "../day1/photos/diagram-shark-teeth.svg",
+   "q": "Shark's teeth (haaientanden) are painted across your lane at a crossing. What do they mean?",
+   "a": [
+    "Give way to the crossing traffic",
+    "Pedestrian crossing ahead",
+    "Speed bump ahead"
+   ],
+   "c": 0,
+   "e": "Shark's teeth painted on the road carry the same authority as a give-way sign: you must give way to the traffic on the crossing road."
+  },
+  {
+   "t": "priority",
+   "img": "../day1/photos/sign-B6-verleen-voorrang.png",
+   "q": "What does this triangle-on-its-point sign require?",
+   "a": [
+    "A complete stop in all cases",
+    "Give way to crossing traffic — stopping only if needed",
+    "Nothing — it is only a warning"
+   ],
+   "c": 1,
+   "e": "The give-way sign (B6) requires you to yield to traffic on the crossing road. Unlike the stop sign, you only stop if someone is actually coming."
+  },
+  {
+   "t": "priority",
+   "img": "../day2/photos/mand-D1-roundabout.png",
+   "q": "You are about to enter a roundabout with give-way markings at the entry. A car is already driving on the roundabout. Who goes first?",
+   "a": [
+    "You — entering traffic has priority",
+    "The car already on the roundabout",
+    "Whoever signals first"
+   ],
+   "c": 1,
+   "e": "With shark's teeth or give-way signs at the entries — the normal Dutch setup — traffic already on the roundabout has priority."
+  },
+  {
+   "t": "priority",
+   "q": "You want to turn left at an intersection. An oncoming car continues straight ahead. Who goes first?",
+   "a": [
+    "You — left turners have priority",
+    "The oncoming car going straight",
+    "The larger vehicle"
+   ],
+   "c": 1,
+   "e": "Traffic going straight on the same road goes before traffic that is turning. Your left turn crosses the oncoming car's path, so it goes first."
+  },
+  {
+   "t": "priority",
+   "q": "You are driving out of a private driveway (uitrit) onto the street. Who must you give way to?",
+   "a": [
+    "Only cars coming from the right",
+    "Only motorised traffic",
+    "Everyone — cars, cyclists and pedestrians"
+   ],
+   "c": 2,
+   "e": "Leaving an exit or driveway puts you last in line: you yield to all other traffic, including cyclists and pedestrians on the pavement you cross."
+  },
+  {
+   "t": "priority",
+   "q": "An ambulance approaches with blue flashing lights AND siren. What is the rule?",
+   "a": [
+    "Only cars in its lane must react",
+    "All road users must let it pass",
+    "It must still wait at give-way signs"
+   ],
+   "c": 1,
+   "e": "An emergency vehicle using both blue lights and siren outranks everyone — all road users must make way. It sits at the very top of the priority ladder."
+  },
+  {
+   "t": "priority",
+   "q": "The traffic light shows green, but a police officer at the intersection signals you to stop. What do you do?",
+   "a": [
+    "Follow the green light",
+    "Stop — the officer's signal wins",
+    "Continue slowly with hazard lights"
+   ],
+   "c": 1,
+   "e": "A police officer directing traffic overrides the traffic light, just as the light overrides the signs. Follow the officer."
+  },
+  {
+   "t": "signs",
+   "img": "../day2/photos/warn-J37-danger.png",
+   "q": "What does this sign tell you?",
+   "a": [
+    "Stop immediately",
+    "A general danger ahead — be alert",
+    "Road closed ahead"
+   ],
+   "c": 1,
+   "e": "A red triangle is always a warning, never a command. The exclamation mark is the general danger sign: something ahead the other symbols don't cover."
+  },
+  {
+   "t": "signs",
+   "img": "../day2/photos/prohib-C2-noentry.png",
+   "q": "What does the red disc with a white horizontal bar mean?",
+   "a": [
+    "No entry — you may not drive in",
+    "One-way street in your direction",
+    "Parking prohibited"
+   ],
+   "c": 0,
+   "e": "This is the no-entry sign — typically the exit of a one-way street. You may not drive past it in this direction."
+  },
+  {
+   "t": "signs",
+   "img": "../day2/photos/prohib-C1-closed.png",
+   "q": "What does this plain red ring with an empty white centre mean?",
+   "a": [
+    "End of all restrictions",
+    "Closed to traffic in both directions",
+    "Give way ahead"
+   ],
+   "c": 1,
+   "e": "The empty red ring (C1) closes the road to traffic in both directions — nobody may drive through."
+  },
+  {
+   "t": "signs",
+   "img": "../day2/photos/prohib-F1-noovertaking.png",
+   "q": "What does this sign forbid?",
+   "a": [
+    "Driving side by side",
+    "Overtaking the vehicle in front",
+    "Using the left lane"
+   ],
+   "c": 1,
+   "e": "Red circle with two cars, the left one red: no overtaking. Red circles always mean 'may not' — the symbol tells you what."
+  },
+  {
+   "t": "signs",
+   "img": "../day2/photos/mand-D5-turnright.png",
+   "q": "You face a blue circle with a white arrow curving right. May you continue straight ahead?",
+   "a": [
+    "Yes, the arrow is only a suggestion",
+    "No — you must turn right",
+    "Only if no one is behind you"
+   ],
+   "c": 1,
+   "e": "A blue circle is a command (gebod). The arrow shows the only permitted direction — you must turn right."
+  },
+  {
+   "t": "signs",
+   "q": "Which sign category does a blue SQUARE belong to?",
+   "a": [
+    "Prohibition",
+    "Mandatory instruction",
+    "Information"
+   ],
+   "c": 2,
+   "e": "Blue square or rectangle = information: it neither forbids nor commands. Compare: blue circle = command, red circle = prohibition, red triangle = warning."
+  },
+  {
+   "t": "signs",
+   "img": "../day2/photos/diagram-road-markings.svg",
+   "q": "A single solid centre line runs next to your lane. A slow tractor drives ahead and the road looks clear. May you cross the line to overtake?",
+   "a": [
+    "Yes, if it is safe",
+    "No — a solid line may not be crossed",
+    "Only outside the built-up area"
+   ],
+   "c": 1,
+   "e": "A solid line is a wall: you may not cross it, however clear the road looks. Only a dashed line may be crossed when safe."
+  },
+  {
+   "t": "signs",
+   "img": "../day2/photos/warn-J24-cyclists.png",
+   "q": "Does this sign require you to give way to cyclists?",
+   "a": [
+    "Yes, always",
+    "No — it warns that crossing cyclists are ahead",
+    "Only during daytime"
+   ],
+   "c": 1,
+   "e": "A red triangle never requires an action — it warns. Whether you must yield at the crossing itself is decided by signs or shark's teeth there, not by this triangle."
+  },
+  {
+   "t": "speed",
+   "img": "../day3/photos/H1.png",
+   "q": "You pass this town-name sign. There is no speed sign anywhere. What is the limit?",
+   "a": [
+    "30 km/h",
+    "50 km/h",
+    "80 km/h"
+   ],
+   "c": 1,
+   "e": "The town-name sign marks the start of the built-up area (bebouwde kom) — and with it the default limit of 50, no number needed."
+  },
+  {
+   "t": "speed",
+   "img": "../day3/photos/H2.png",
+   "q": "You pass the town-name sign with a red line through it. No other signs. How fast may you go?",
+   "a": [
+    "50 km/h",
+    "80 km/h",
+    "100 km/h"
+   ],
+   "c": 1,
+   "e": "Leaving the built-up area, the default outside limit applies: 80 km/h. The road type sets the limit when no sign does."
+  },
+  {
+   "t": "speed",
+   "img": "../day3/photos/diagram-daytime-100.svg",
+   "q": "You are on the autosnelweg at two in the afternoon. No matrix boards are lit. Your maximum speed?",
+   "a": [
+    "100 km/h",
+    "120 km/h",
+    "130 km/h"
+   ],
+   "c": 0,
+   "e": "Between 06:00 and 19:00 every Dutch motorway is capped at 100. The 130 on the entry signs applies only at night, and only where signed."
+  },
+  {
+   "t": "speed",
+   "img": "img/A1-130.png",
+   "q": "It is 22:00 on the autosnelweg and this sign applies to your stretch. Your maximum?",
+   "a": [
+    "100 km/h — always on motorways",
+    "130 km/h",
+    "110 km/h"
+   ],
+   "c": 1,
+   "e": "At night (19:00–06:00), 130 is allowed where signed. The 100 cap is a daytime rule (06:00–19:00)."
+  },
+  {
+   "t": "speed",
+   "img": "../day3/photos/A1-30zone.png",
+   "q": "You entered past this zone sign, turned into a side street, and see no speed sign there. How fast may you go?",
+   "a": [
+    "30 km/h — the zone still applies",
+    "50 km/h — town default",
+    "As fast as is safe"
+   ],
+   "c": 0,
+   "e": "A zone sign covers the whole area and is not repeated on side streets. It holds until you pass the grey end-of-zone sign."
+  },
+  {
+   "t": "speed",
+   "img": "../day3/photos/A2.png",
+   "q": "Outside the built-up area you pass this end-of-50 sign. What applies now?",
+   "a": [
+    "No speed limit",
+    "The road-type default — 80 km/h here",
+    "50 km/h continues"
+   ],
+   "c": 1,
+   "e": "The end sign means the posted limit is over — you fall back to the default for the road type. Outside the built-up area that is 80."
+  },
+  {
+   "t": "speed",
+   "img": "../day3/photos/A4.png",
+   "q": "On a curve, this blue square shows 50 km/h. You drive 60. Is that an offence in itself?",
+   "a": [
+    "Yes — limits are limits",
+    "No — it is an advisory speed, not a limit",
+    "Only in rain"
+   ],
+   "c": 1,
+   "e": "A blue square is information: this is the adviessnelheid, the recommended speed. Exceeding it is not an offence in itself — but the road's real limit and your duty to drive safely still stand."
+  },
+  {
+   "t": "speed",
+   "img": "../day3/photos/G5.png",
+   "q": "You drive into an area marked with this sign. What speed applies?",
+   "a": [
+    "30 km/h",
+    "Walking pace",
+    "50 km/h"
+   ],
+   "c": 1,
+   "e": "This is the erf (woonerf): the street belongs to residents, children may play on it, and you drive at walking pace (stapvoets) — about 15 km/h in practice."
+  },
+  {
+   "t": "speed",
+   "img": "../day3/photos/diagram-lowest-wins.svg",
+   "q": "Night, motorway signed 130, and you are towing a caravan. Your maximum?",
+   "a": [
+    "130 km/h",
+    "100 km/h",
+    "90 km/h"
+   ],
+   "c": 2,
+   "e": "A car with a trailer or caravan may never exceed 90. Of all limits that apply — road, sign, vehicle — the lowest always wins."
+  },
+  {
+   "t": "users",
+   "img": "../day4/photos/diagram-rightturn-cyclist.svg",
+   "q": "You turn right into a side street. A cyclist on the cycle path beside you continues straight. Who goes first?",
+   "a": [
+    "You — cars before bicycles",
+    "The cyclist",
+    "Whoever is closer to the corner"
+   ],
+   "c": 1,
+   "e": "Traffic going straight on the same road goes before turning traffic — and the cycle path counts as the same road. Mirror, shoulder, cycle path, then turn."
+  },
+  {
+   "t": "users",
+   "img": "../day4/photos/L2.png",
+   "q": "At a zebra crossing, a person is pushing their bicycle across. Must you give way?",
+   "a": [
+    "Yes — pushing a bike makes them a pedestrian",
+    "No — they have a bicycle",
+    "Only if they raise a hand"
+   ],
+   "c": 0,
+   "e": "Someone walking with their bike is legally a pedestrian, and pedestrians on or clearly about to cross a zebra have priority."
+  },
+  {
+   "t": "users",
+   "img": "../day4/photos/L2.png",
+   "q": "A cyclist RIDES across the zebra crossing in front of you. Do they have priority because of the zebra?",
+   "a": [
+    "Yes — the zebra protects everyone",
+    "No — the zebra gives riders no priority",
+    "Only children"
+   ],
+   "c": 1,
+   "e": "The zebra protects walkers, not riders. A riding cyclist has no zebra priority — though you must still avoid endangering them."
+  },
+  {
+   "t": "users",
+   "img": "../day4/photos/diagram-moped-classes.svg",
+   "q": "A moped with a BLUE number plate rides ahead of you in town. Where does it belong, and how fast may it go?",
+   "a": [
+    "On the road, 45 km/h",
+    "On the cycle path, 25 km/h",
+    "On the pavement, 15 km/h"
+   ],
+   "c": 1,
+   "e": "Blue plate = snorfiets: limited to 25 km/h and it rides on the cycle path. Yellow plate = bromfiets: 45, and on the road in town."
+  },
+  {
+   "t": "users",
+   "q": "Inside the built-up area, where does a yellow-plate moped (bromfiets) ride?",
+   "a": [
+    "On the cycle path",
+    "On the road, with the cars",
+    "Wherever the rider prefers"
+   ],
+   "c": 1,
+   "e": "Inside the built-up area the bromfiets rides on the carriageway with the cars — that has been its place since the nineties. Do not expect it to move to the cycle path."
+  },
+  {
+   "t": "users",
+   "img": "../day4/photos/J14.png",
+   "q": "At an unmarked equal intersection, a tram approaches from your LEFT. Who goes first?",
+   "a": [
+    "You — traffic from the left yields",
+    "The tram",
+    "Whoever arrives first"
+   ],
+   "c": 1,
+   "e": "The tram beats right-before-left: at equal intersections a tram has priority from any direction. Rails override the compass."
+  },
+  {
+   "t": "users",
+   "q": "Inside the built-up area, a bus at a bus stop signals that it wants to pull out. What must you do?",
+   "a": [
+    "Pass quickly before it moves",
+    "Give it the opportunity to pull out",
+    "Sound your horn"
+   ],
+   "c": 1,
+   "e": "In the built-up area you must give a bus the chance to leave its stop when it signals. A small but real priority for the bus."
+  },
+  {
+   "t": "users",
+   "img": "../day4/photos/diagram-blindspot.svg",
+   "q": "At a red light a truck waits, indicating right. There is space to ride up along its right side to the stop line. Do you take it?",
+   "a": [
+    "Yes — use the available space",
+    "No — stay behind the truck",
+    "Yes, but only slowly"
+   ],
+   "c": 1,
+   "e": "That space is the heart of the dode hoek — the driver cannot see you, and his right turn sweeps exactly through it. Stay behind, visible in his mirrors."
+  },
+  {
+   "t": "driver",
+   "img": "../day5/photos/diagram-alcohol-limits.svg",
+   "q": "What is the blood alcohol limit for a driver in the first five years of holding a licence?",
+   "a": [
+    "0.5 promille",
+    "0.2 promille",
+    "0.8 promille"
+   ],
+   "c": 1,
+   "e": "Novice drivers — the first five years of the licence — are limited to 0.2 promille, less than a single drink. The 0.5 limit applies only after those five years."
+  },
+  {
+   "t": "driver",
+   "q": "A driver has held their licence for six years. What is their legal alcohol limit?",
+   "a": [
+    "0.2 promille",
+    "0.5 promille",
+    "Zero"
+   ],
+   "c": 1,
+   "e": "After the first five licence years the standard limit of 0.5 promille applies. (The wise answer remains: if you drive, don't drink.)"
+  },
+  {
+   "t": "driver",
+   "img": "../day5/photos/diagram-drugs-medicines.svg",
+   "q": "Your medicine box carries a yellow warning sticker. What does it mean?",
+   "a": [
+    "The medicine is out of date",
+    "It can affect your driving — check before you drive",
+    "You must take it before driving"
+   ],
+   "c": 1,
+   "e": "The yellow sticker marks medicines that can impair reaction time. It means: ask the pharmacist or read the leaflet before driving — with some of these, driving is forbidden."
+  },
+  {
+   "t": "driver",
+   "q": "How much cannabis or cocaine may legally be in your blood while driving?",
+   "a": [
+    "A small amount, like alcohol",
+    "None — any measurable amount is an offence",
+    "Only prescription amounts"
+   ],
+   "c": 1,
+   "e": "For illegal drugs the law is zero tolerance, checked by roadside saliva test. There is no 'small enough' the way there is with alcohol."
+  },
+  {
+   "t": "driver",
+   "img": "../day5/photos/diagram-phone-rule.svg",
+   "q": "You are stationary at a red light, engine running, and answer a text with the phone in your hand. Offence?",
+   "a": [
+    "No — the car is not moving",
+    "Yes — waiting at a light still counts as driving",
+    "Only if the police see it"
+   ],
+   "c": 1,
+   "e": "The ban is on holding a mobile device while driving — and standing in traffic is still driving. In a cradle, operated hands-free, it would be legal."
+  },
+  {
+   "t": "driver",
+   "img": "../day5/photos/diagram-documents.svg",
+   "q": "Which insurance is legally required for every car on the public road?",
+   "a": [
+    "All-risk (casco) insurance",
+    "Third-party liability (WA) insurance",
+    "Theft insurance"
+   ],
+   "c": 1,
+   "e": "WA (wettelijke aansprakelijkheid) covers the damage you do to others and is mandatory. All-risk cover for your own car is optional."
+  },
+  {
+   "t": "driver",
+   "img": "../day5/photos/diagram-belts-kids.svg",
+   "q": "A seven-year-old child of 1.20 m sits in the back wearing only the normal seatbelt. Who is committing an offence?",
+   "a": [
+    "Nobody — a belt is enough",
+    "The driver — the child needs a child seat",
+    "The child's parents"
+   ],
+   "c": 1,
+   "e": "Under 1.35 m a child needs an approved child seat or booster; the belt alone is not lawful. For passengers under 12 the responsibility — and the fine — is the driver's."
+  },
+  {
+   "t": "parking",
+   "img": "img/E1.png",
+   "q": "Under this sign, may you stop briefly to let a passenger out?",
+   "a": [
+    "Yes — it forbids parking, not stopping",
+    "No — you may not even halt",
+    "Only at night"
+   ],
+   "c": 0,
+   "e": "The single slash (E1) forbids parking only. Stopping — briefly letting passengers in or out, or loading — is legally a different act and remains allowed."
+  },
+  {
+   "t": "parking",
+   "img": "img/E2.png",
+   "q": "Under this sign, may you halt for ten seconds to drop someone off?",
+   "a": [
+    "Yes, if it is quick",
+    "No — this sign forbids even stopping",
+    "Only for taxis"
+   ],
+   "c": 1,
+   "e": "The X (E2) is the stopping ban — the total ban. If you may not even stop, you certainly may not park or drop off."
+  },
+  {
+   "t": "parking",
+   "q": "You find a parking gap three metres from the corner of a junction. No signs anywhere. May you park?",
+   "a": [
+    "Yes — no sign means no ban",
+    "No — within 5 metres of a junction parking is automatically forbidden",
+    "Only for 10 minutes"
+   ],
+   "c": 1,
+   "e": "The most important parking bans are never signed. Within five metres of a junction parking is forbidden by law — sightlines are everyone's safety."
+  },
+  {
+   "t": "parking",
+   "img": "../day6/photos/E10.png",
+   "q": "You park inside this zone at 13:15 and walk away without doing anything else. Legal?",
+   "a": [
+    "Yes — parking here is free",
+    "No — you must display a parking disc set to 13:30",
+    "Only with a permit"
+   ],
+   "c": 1,
+   "e": "In a parkeerschijfzone you must display a parking disc set to your arrival time rounded UP to the next half hour — then you may stay the posted maximum."
+  },
+  {
+   "t": "parking",
+   "img": "../day6/photos/diagram-lights.svg",
+   "q": "Evening mist, visibility about 200 metres. May you switch on the rear fog light?",
+   "a": [
+    "Yes — better safe than sorry",
+    "No — only below 50 metres visibility",
+    "Only on the motorway"
+   ],
+   "c": 1,
+   "e": "The rear fog light is legal only when visibility drops below 50 metres. Above that it dazzles the driver behind and masks your brake lights — an offence."
+  },
+  {
+   "t": "parking",
+   "q": "What is the legal minimum tread depth for car tyres?",
+   "a": [
+    "1.0 mm",
+    "1.6 mm",
+    "2.5 mm"
+   ],
+   "c": 1,
+   "e": "1.6 millimetres. Below that the tyre is illegal — and in rain genuinely dangerous, because tread is what channels water away."
+  },
+  {
+   "t": "parking",
+   "img": "../day6/photos/diagram-eco-vehicle.svg",
+   "q": "Which driving habit saves fuel?",
+   "a": [
+    "Shifting up early, around 2,000–2,500 rpm",
+    "Staying in low gear at high revs for control",
+    "Accelerating hard, then coasting"
+   ],
+   "c": 0,
+   "e": "Low revs in a high gear is the efficient place to be. On eco questions the calm answer — early upshifts, steady speed, anticipation — is always the right one."
+  },
+  {
+   "t": "insight",
+   "img": "../day7/photos/diagram-hazard-scene.svg",
+   "q": "A ball bounces into the road from between parked cars, thirty metres ahead. The road is otherwise clear. What do you do?",
+   "a": [
+    "Steer around the ball",
+    "Brake firmly — a child may follow",
+    "Sound the horn and continue"
+   ],
+   "c": 1,
+   "e": "A ball never crosses alone. Treat it as a child already stepping out: brake hard now. Swerving around the ball answers the wrong hazard."
+  },
+  {
+   "t": "insight",
+   "img": "../day7/photos/diagram-exam-format.svg",
+   "q": "Dusk and drizzle outside the built-up area, limit 80. One question asks if you MAY drive 80, another if it is WISE. What is the correct pair of answers?",
+   "a": [
+    "May: yes — Wise: no",
+    "May: no — Wise: no",
+    "May: yes — Wise: yes"
+   ],
+   "c": 0,
+   "e": "'May you' asks about the law — 80 is legal here. 'Is it wise' asks about safety — in dusk and rain it is not. The exam plants exactly this pair; answer the verb that was asked."
+  }
+ ]
+}

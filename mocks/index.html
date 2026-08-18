@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>CBR Mock Exams</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#1a1a1a; color:#f5f5f5;
+         font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; }
+  main { max-width:640px; margin:0 auto; padding:20px 16px 60px; }
+  h1 { font-size:1.5rem; margin:12px 0 4px; }
+  .sub { color:#aaa; font-size:.92rem; margin:0 0 20px; }
+  .card { background:#262626; border:1px solid #3a3a3a; border-radius:14px; padding:16px 18px; margin:12px 0; }
+  button { font:inherit; border:0; border-radius:12px; cursor:pointer; }
+  .btn-primary { background:#ffb454; color:#1a1a1a; font-weight:700; padding:14px 22px; width:100%; font-size:1.05rem; }
+  .btn-ghost { background:#333; color:#f5f5f5; padding:12px 18px; }
+  .setbtn { display:flex; justify-content:space-between; align-items:center; width:100%;
+            background:#262626; border:1px solid #3a3a3a; border-radius:14px; padding:16px 18px;
+            margin:10px 0; color:#f5f5f5; text-align:left; }
+  .setbtn .best { color:#7bc96f; font-size:.85rem; }
+  .setbtn .name { font-size:1.1rem; font-weight:600; }
+  label.toggle { display:flex; align-items:center; gap:10px; color:#aaa; font-size:.95rem; margin:14px 2px; }
+  /* exam */
+  header.exam { position:sticky; top:0; background:#1a1a1a; padding:10px 0; display:flex;
+                justify-content:space-between; align-items:center; border-bottom:1px solid #333; z-index:5; }
+  .prog { color:#ffb454; font-weight:700; }
+  .timer { color:#aaa; font-variant-numeric:tabular-nums; }
+  .timer.low { color:#ff6b6b; font-weight:700; }
+  .qimg { display:block; max-width:min(100%,300px); max-height:220px; margin:10px auto 14px;
+          background:#1a1a1a; border-radius:8px; }
+  .qtext { font-size:1.08rem; line-height:1.45; margin:6px 0 14px; }
+  .opt { display:block; width:100%; text-align:left; background:#2e2e2e; border:2px solid #3a3a3a;
+         border-radius:12px; padding:13px 15px; margin:8px 0; color:#f5f5f5; font-size:1rem; line-height:1.35; }
+  .opt.sel { border-color:#ffb454; background:#3a3223; }
+  nav.qnav { display:flex; gap:10px; margin-top:16px; }
+  nav.qnav button { flex:1; padding:13px; }
+  .dots { display:flex; flex-wrap:wrap; gap:5px; margin:14px 0 4px; }
+  .dot { width:14px; height:14px; border-radius:4px; background:#333; }
+  .dot.done { background:#7a5c26; }
+  .dot.cur { outline:2px solid #ffb454; }
+  /* results */
+  .score-big { font-size:3rem; font-weight:800; text-align:center; margin:6px 0 0; }
+  .pass { color:#7bc96f; } .fail { color:#ff6b6b; }
+  .verdict { text-align:center; font-size:1.1rem; margin:2px 0 18px; }
+  table.topics { width:100%; border-collapse:collapse; font-size:.95rem; }
+  table.topics td { padding:6px 4px; border-top:1px solid #333; }
+  table.topics td:last-child { text-align:right; font-variant-numeric:tabular-nums; }
+  .rev { border-left:4px solid #3a3a3a; }
+  .rev.wrong { border-left-color:#ff6b6b; }
+  .rev.right { border-left-color:#7bc96f; }
+  .rev .qtext { font-size:1rem; }
+  .ans { font-size:.95rem; margin:4px 0; }
+  .ans .you { color:#ff8a8a; } .ans .cor { color:#7bc96f; }
+  .expl { color:#bbb; font-size:.92rem; line-height:1.45; margin-top:8px; }
+  .tag { display:inline-block; font-size:.72rem; letter-spacing:.05em; color:#ffb454;
+         border:1px solid #7a5c26; border-radius:6px; padding:2px 7px; margin-bottom:6px; text-transform:uppercase; }
+  a.back { color:#ffb454; text-decoration:none; font-size:.95rem; }
+  .hide { display:none; }
+</style>
+</head>
+<body>
+<main>
+  <div id="home">
+    <a class="back" href="../index.html">← course</a>
+    <h1>📝 CBR Mock Exams</h1>
+    <p class="sub">Real exam format: 50 questions, pass at 44, about 30 minutes. No feedback until you finish — then every question is explained. Question and answer order shuffle on every attempt.</p>
+    <div id="setlist"></div>
+    <label class="toggle"><input type="checkbox" id="usetimer" checked> 30-minute timer (auto-submits at 0:00)</label>
+    <p class="sub">Target before the real exam: <b>47+ twice in a row</b>. Review every wrong answer until you can say <i>why</i>.</p>
+  </div>
+
+  <div id="exam" class="hide">
+    <header class="exam">
+      <button class="btn-ghost" id="quit" style="padding:8px 12px">✕</button>
+      <span class="prog" id="prog"></span>
+      <span class="timer" id="timer">–</span>
+    </header>
+    <div class="dots" id="dots"></div>
+    <div class="card">
+      <img id="qimg" class="qimg hide" alt="">
+      <div class="qtext" id="qtext"></div>
+      <div id="opts"></div>
+    </div>
+    <nav class="qnav">
+      <button class="btn-ghost" id="prev">← Back</button>
+      <button class="btn-ghost" id="next">Next →</button>
+    </nav>
+    <div style="margin-top:14px"><button class="btn-primary hide" id="finish">Finish &amp; score</button></div>
+  </div>
+
+  <div id="results" class="hide">
+    <a class="back" href="#" id="again">← back to mock exams</a>
+    <div class="score-big" id="score"></div>
+    <div class="verdict" id="verdict"></div>
+    <div class="card">
+      <b>By topic</b>
+      <table class="topics" id="topics"></table>
+    </div>
+    <h1 style="font-size:1.2rem">Review</h1>
+    <p class="sub">Wrong answers first.</p>
+    <div id="review"></div>
+  </div>
+</main>
+
+<script>
+const SET_FILES = ["mock1.json","mock2.json","mock3.json"];
+const TOPIC_NAMES = { priority:"Priority (Day 1)", signs:"Signs (Day 2)", speed:"Speed (Day 3)",
+  users:"Road users (Day 4)", driver:"Driver rules (Day 5)", parking:"Parking & car (Day 6)", insight:"Insight (Day 7)" };
+let sets = [], cur = null; // cur = {name, qs, answers[], idx, deadline, timerId}
+
+const $ = id => document.getElementById(id);
+const show = id => { for (const s of ["home","exam","results"]) $(s).classList.toggle("hide", s!==id); window.scrollTo(0,0); };
+
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+async function init(){
+  const loads = await Promise.all(SET_FILES.map(f => fetch(f).then(r=>r.json())));
+  sets = loads;
+  const list = $("setlist"); list.innerHTML = "";
+  sets.forEach((s,i)=>{
+    const best = localStorage.getItem("cbr-best-"+i);
+    const b = document.createElement("button");
+    b.className = "setbtn";
+    b.innerHTML = `<span class="name">${s.name}</span><span class="best">${best?("best "+best+"/50"):"not taken"}</span>`;
+    b.onclick = ()=>start(i);
+    list.appendChild(b);
+  });
+}
+
+function start(i){
+  const qs = shuffle(sets[i].questions.map(q=>{
+    const order = shuffle(q.a.map((_,k)=>k));
+    return { ...q, order };
+  }));
+  cur = { seti:i, name:sets[i].name, qs, answers:Array(qs.length).fill(null), idx:0,
+          deadline: $("usetimer").checked ? Date.now()+30*60*1000 : null, timerId:null };
+  if (cur.deadline){
+    cur.timerId = setInterval(()=>{
+      const left = cur.deadline - Date.now();
+      if (left <= 0){ clearInterval(cur.timerId); finish(); return; }
+      const m = Math.floor(left/60000), s = Math.floor(left%60000/1000);
+      const t = $("timer"); t.textContent = m+":"+String(s).padStart(2,"0");
+      t.classList.toggle("low", left < 5*60*1000);
+    }, 500);
+  } else $("timer").textContent = "";
+  show("exam"); render();
+}
+
+function render(){
+  const q = cur.qs[cur.idx];
+  $("prog").textContent = (cur.idx+1)+" / "+cur.qs.length;
+  const img = $("qimg");
+  if (q.img){ img.src = q.img; img.classList.remove("hide"); } else img.classList.add("hide");
+  $("qtext").textContent = q.q;
+  const opts = $("opts"); opts.innerHTML = "";
+  q.order.forEach(origIdx=>{
+    const b = document.createElement("button");
+    b.className = "opt" + (cur.answers[cur.idx]===origIdx ? " sel" : "");
+    b.textContent = q.a[origIdx];
+    b.onclick = ()=>{ cur.answers[cur.idx]=origIdx; if (cur.idx < cur.qs.length-1){ cur.idx++; } render(); };
+    opts.appendChild(b);
+  });
+  $("prev").disabled = cur.idx===0;
+  $("next").disabled = cur.idx===cur.qs.length-1;
+  const answered = cur.answers.filter(x=>x!==null).length;
+  $("finish").classList.toggle("hide", !(answered===cur.qs.length || cur.idx===cur.qs.length-1));
+  $("finish").textContent = answered===cur.qs.length ? "Finish & score" : `Finish (${cur.qs.length-answered} unanswered)`;
+  const dots = $("dots"); dots.innerHTML = "";
+  cur.qs.forEach((_,i)=>{
+    const d = document.createElement("span");
+    d.className = "dot" + (cur.answers[i]!==null?" done":"") + (i===cur.idx?" cur":"");
+    d.onclick = ()=>{ cur.idx=i; render(); };
+    dots.appendChild(d);
+  });
+}
+
+function finish(){
+  if (cur.timerId) clearInterval(cur.timerId);
+  let right = 0; const byTopic = {};
+  cur.qs.forEach((q,i)=>{
+    byTopic[q.t] = byTopic[q.t] || {r:0,n:0};
+    byTopic[q.t].n++;
+    if (cur.answers[i]===q.c){ right++; byTopic[q.t].r++; }
+  });
+  const passed = right >= 44;
+  const bestKey = "cbr-best-"+cur.seti, prev = +(localStorage.getItem(bestKey)||0);
+  if (right > prev) localStorage.setItem(bestKey, right);
+  $("score").textContent = right+" / "+cur.qs.length;
+  $("score").className = "score-big " + (passed?"pass":"fail");
+  $("verdict").textContent = passed
+    ? (right>=47 ? "Passed — and at target (47+). 🎉" : "Passed (pass mark 44) — push for 47+.")
+    : "Not yet — pass mark is 44. Review below, rewatch the weak day.";
+  const tt = $("topics"); tt.innerHTML = "";
+  Object.keys(TOPIC_NAMES).forEach(t=>{
+    if (!byTopic[t]) return;
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${TOPIC_NAMES[t]}</td><td>${byTopic[t].r} / ${byTopic[t].n}</td>`;
+    tt.appendChild(tr);
+  });
+  const rev = $("review"); rev.innerHTML = "";
+  const order = cur.qs.map((_,i)=>i).sort((a,b)=>(cur.answers[a]===cur.qs[a].c)-(cur.answers[b]===cur.qs[b].c));
+  order.forEach(i=>{
+    const q = cur.qs[i], ok = cur.answers[i]===q.c;
+    const d = document.createElement("div");
+    d.className = "card rev " + (ok?"right":"wrong");
+    d.innerHTML = `<span class="tag">${TOPIC_NAMES[q.t]||q.t}</span>`
+      + (q.img?`<img class="qimg" src="${q.img}" alt="">`:"")
+      + `<div class="qtext">${q.q}</div>`
+      + `<div class="ans"><span class="${ok?'cor':'you'}">Your answer: ${cur.answers[i]===null?"—":q.a[cur.answers[i]]}</span></div>`
+      + (ok?"":`<div class="ans"><span class="cor">Correct: ${q.a[q.c]}</span></div>`)
+      + `<div class="expl">${q.e}</div>`;
+    rev.appendChild(d);
+  });
+  show("results"); init();
+}
+
+$("prev").onclick = ()=>{ cur.idx--; render(); };
+$("next").onclick = ()=>{ cur.idx++; render(); };
+$("finish").onclick = ()=>{
+  const un = cur.answers.filter(x=>x===null).length;
+  if (un>0 && !confirm(un+" question(s) unanswered — they will count as wrong. Finish anyway?")) return;
+  finish();
+};
+$("quit").onclick = ()=>{ if (confirm("Abandon this attempt?")){ if (cur.timerId) clearInterval(cur.timerId); show("home"); } };
+$("again").onclick = e=>{ e.preventDefault(); show("home"); };
+
+init();
+</script>
+</body>
+</html>
